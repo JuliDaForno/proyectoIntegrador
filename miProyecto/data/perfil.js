@@ -24,10 +24,9 @@ const perfil =
     ],
     detalleUsuario: function(usuario){
         let resultado = [];
-        for (let i = 0; i <perfil.usuarios.length; i++) {
+        for (let i = 0; i<perfil.usuarios.length; i++) {
             if (usuario == perfil.usuarios[i].nombre) {
-                resultado.push(perfil.usuarios[i])
-                
+                resultado.push(perfil.usuarios[i])   
             }
             
         }

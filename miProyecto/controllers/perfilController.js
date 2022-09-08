@@ -3,8 +3,8 @@ const perfil = require('../data/perfil');
 const perfilControllerr ={
     detalleUsuario: function (req,res) {
         let perfilUsuario = req.params.perfilUsuario
-        let resultado = perfil.detalleUsuario(detalleUsuario)
-        return res.render('perfil', {usuarios: resultado})   
+        let resultado = perfil.nombre(perfilUsuario)
+        return res.render('detalleUsuario', {usuarios: resultado})   
     },
 }
 module.exports = perfilControllerr

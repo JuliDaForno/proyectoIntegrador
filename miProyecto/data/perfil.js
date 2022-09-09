@@ -22,16 +22,18 @@ const perfil =
     posteos:[
 
     ],
-    detalleUsuario: function(usuario){
+    detalleUsuario: function(id){
         let resultado = [];
         for (let i = 0; i<perfil.usuarios.length; i++) {
-            if (usuario == perfil.usuarios[i].nombre) {
+            if (id == perfil.usuarios[i].id) {
                 resultado.push(perfil.usuarios[i])   
             }
             
         }
         return resultado
-    }
+    },
+    
     
 }
-module.exports = perfil
+module.exports = perfil;
+

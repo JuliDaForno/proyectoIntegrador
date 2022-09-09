@@ -9,7 +9,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
@@ -43,13 +43,13 @@
                 <img class="profile" src="https://via.placeholder.com/100x100" alt="">
                 <div class="info-usuario">
                     <p>
-                        <%= usuarios[i].resultado%> 
+                        <%= usuarios.nombre %> 
                     </p> 
                     <a class="follow" href="">seguir</a>
                     <ul class="meta">
-                        <li>100 post</li>
-                        <li>200 seguidores</li>
-                        <li>300 seguidos</li>
+                        <li> <%= usuarios.publicaciones %> </li>
+                        <li> <%= usuarios.seguidores %></li>
+                        <li><%= usuarios.seguidos %></li>
                     </ul>
                 </div>
             </section>

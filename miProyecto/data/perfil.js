@@ -6,7 +6,8 @@ const perfil =
             seguidores: '151 mill.',
             publicaciones: '3.541',
             seguidos: '1.755',
-            id:3
+            posteo:'images/Zendaya.jpg',
+            id:3,
 
         },
         {
@@ -14,7 +15,7 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-            id:5
+            id:5,
 
         },
         
@@ -24,11 +25,10 @@ const perfil =
     ],
     detalleUsuario: function(id){
         let resultado = [];
-        for (let i = 0; i<perfil.usuarios.length; i++) {
-            if (id == perfil.usuarios[i].id) {
+        for (let i=0; i<perfil.usuarios.length; i++) {
+            if (id==perfil.usuarios[i].id) {
                 resultado.push(perfil.usuarios[i])   
-            }
-            
+            }     
         }
         return resultado
     },

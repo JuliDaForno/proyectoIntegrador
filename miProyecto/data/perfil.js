@@ -6,7 +6,9 @@ const perfil =
             seguidores: '151 mill.',
             publicaciones: '3.541',
             seguidos: '1.755',
-            posteo:'images/Zendaya.jpg',
+            posteo:'images/posteoZendaya.jpg',
+            posteo2:'images/posteo2Zendaya.jpg',
+            fotoPerfil:'images/fotoPerfilZendaya.jpg', 
             id:3,
 
         },

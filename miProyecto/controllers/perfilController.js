@@ -7,5 +7,6 @@ const perfilController = {
         console.log(resultado);
         return res.render('detalleUsuario', {usuario:resultado})   
     },
+    
 }
 module.exports = perfilController

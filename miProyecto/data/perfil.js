@@ -16,11 +16,8 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-<<<<<<< HEAD
             fotoPerfil:'images/fotoPerfilZendaya.jpg', 
-=======
             fotoPerfil:'images/posteo2Noah.jpeg', 
->>>>>>> 21369db38d5ca262a42a8d1c047809fd93b72fa0
             id:5,
 
         },

@@ -24,10 +24,13 @@ const perfil =
 
     ],
     detalleUsuario: function(id){
-        let resultado = [];
+        //console.log(id);
+        let resultado = {};
         for (let i=0; i<perfil.usuarios.length; i++) {
+            //console.log(perfil.usuarios[i]);
             if (id==perfil.usuarios[i].id) {
-                resultado.push(perfil.usuarios[i])   
+                //console.log('dentro del if');
+                resultado=perfil.usuarios[i]   
             }     
         }
         return resultado

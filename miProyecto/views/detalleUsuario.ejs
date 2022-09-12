@@ -21,12 +21,12 @@
                 <img class="profile" src="https://via.placeholder.com/100x100" alt="">
                 <div class="info-usuario">
 
-                    <p><%= usuarios.nombre %> </p> 
+                    <p><%= usuario.nombre %> </p> 
                     <a class="follow" href="">seguir</a>
                     <ul class="meta">
-                        <li> <%= usuarios.publicaciones %> </li>
-                        <li> <%= usuarios.seguidores %></li>
-                        <li><%= usuarios.seguidos %></li>
+                        <li> <%= usuario.publicaciones %> </li>
+                        <li> <%= usuario.seguidores %></li>
+                        <li><%= usuario.seguidos %></li>
                     </ul>
                 </div>
             </section>
@@ -53,7 +53,7 @@
                 </article>
                 <article class="post">
                     <a href="detallePost.html">
-                        <img src="/<%= usuarios.posteo %> " alt="">
+                        <img src="/<%= usuario.posteo %> " alt="">
                     </a>
                 </article>
             </section>

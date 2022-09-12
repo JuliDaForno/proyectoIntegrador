@@ -1,10 +1,11 @@
 
 const perfil = require('../data/perfil');
-const perfilControllerr = {
+const perfilController = {
     detalleUsuario: function (req,res) {
-        let usuario = req.params.usuario;
-        let resultado = perfil.detalleUsuario(usuario);
-        return res.render('detalleUsuario', {usuarios:resultado})   
+        let id = req.params.id;
+        let resultado = perfil.detalleUsuario(id);
+        console.log(resultado);
+        return res.render('detalleUsuario', {usuario:resultado})   
     },
 }
-module.exports = perfilControllerr
+module.exports = perfilController

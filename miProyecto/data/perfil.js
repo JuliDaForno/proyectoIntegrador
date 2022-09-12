@@ -7,7 +7,7 @@ const perfil =
             seguidores: '151 mill.',
             publicaciones: '3.541',
             seguidos: '1.755',
-            fotoPerfil:'images/fotoPerfilZendaya.jpg', 
+            fotoPerfil:'images/poste2Noah.jpeg', 
            
 
         },
@@ -59,7 +59,7 @@ const perfil =
         {
             id_Usuario: 5,
             nombre: 'noah',
-            posteo:'images/poseteNoah.jpg',
+            posteo:'images/posteo1Noah.jpeg',
             posteo2:'images/poseteNoah.jpg'},
             {
                 id_Usuario: 4,
@@ -67,13 +67,14 @@ const perfil =
                 posteo:'images/ladygagaposteo1.jpeg',
             posteo2:'images/ladygagaposteo2.jpg'},
             {
-                id_Usuario: 3,
-                nombre: 'Lady Gaga',
+                id_Usuario:1,
+                nombre: 'Miley Cyrus',
                 posteo:'images/mileyposteo1.jpg',
                 posteo2:'images/mileyposteo2.jpg'},
 
-  { id_Usuario: 2,
-                nombre: 'Lady Gaga',
+  { 
+    id_Usuario: 2,
+                nombre: 'Adele Blue',
                 posteo:'images/adeleposteo1.jpg',
                 posteo2:'images/adeleposteo2.jpg',
                }

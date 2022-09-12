@@ -7,3 +7,4 @@ const perfilController = require('../controllers/perfilController')
 router.get('/', perfilController.index);
 
 module.exports = router;
+

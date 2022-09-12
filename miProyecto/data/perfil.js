@@ -16,6 +16,7 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
+            fotoPerfil:'images/fotoPerfilZendaya.jpg', 
             fotoPerfil:'images/posteo2Noah.jpeg', 
             id:5,
 
@@ -107,8 +108,10 @@ const perfil =
         return resultado
     },
     
+
+        
+    }
     
-    
-}
+
 module.exports = perfil;
 

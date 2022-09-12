@@ -15,7 +15,10 @@ const perfilController = {
     },
     register:(req,res)=>{
         res.render('registracion')
-      }
+    },
 
+    index: function (req, res) {
+        return res.render('index', {posteos : perfil.posteos})
+    }
 }
 module.exports = perfilController

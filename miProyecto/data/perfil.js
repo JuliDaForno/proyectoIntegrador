@@ -7,7 +7,7 @@ const perfil =
             seguidores: '151 mill.',
             publicaciones: '3.541',
             seguidos: '1.755',
-            fotoPerfil:'images/poste2Noah.jpeg', 
+            fotoPerfil:'images/fotoPerfilZendaya.jpg', 
            
 
         },
@@ -16,7 +16,6 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-            fotoPerfil:'images/fotoPerfilZendaya.jpg', 
             fotoPerfil:'images/posteo2Noah.jpeg', 
             id:5,
 
@@ -59,7 +58,7 @@ const perfil =
         {
             id_Usuario: 5,
             nombre: 'noah',
-            posteo:'images/posteo1Noah.jpeg',
+            posteo:'images/posteo1Noah.jpg',
             posteo2:'images/poseteNoah.jpg'},
             {
                 id_Usuario: 4,

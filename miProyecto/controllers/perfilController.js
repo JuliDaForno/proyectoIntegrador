@@ -4,8 +4,10 @@ const perfilController = {
     detalleUsuario: function (req,res) {
         let id = req.params.id;
         let resultado = perfil.detalleUsuario(id);
+        let posteos = perfil.detallePosteo(id);
         console.log(resultado);
-        return res.render('detalleUsuario', {usuario:resultado})   
+        
+        return res.render('detalleUsuario', {usuario:resultado, posteos: posteos})   
 
     },
     detallePosteo: function(req,res){

@@ -6,12 +6,12 @@ const perfilController = {
         let resultado = perfil.detalleUsuario(id);
         console.log(resultado);
         return res.render('detalleUsuario', {usuario:resultado})   
+
     },
     detallePosteo: function(req,res){
         let id_usuario = req.params.id_usuario
         let posteo= perfil.detallePosteo(id_usuario);
-        res.send(posteo)
-        let resultado = perfil.detallePosteo
+        return res.render('detallePost', {post:posteo})
     },
     register:(req,res)=>{
         res.render('registracion')

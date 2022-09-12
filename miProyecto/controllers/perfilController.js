@@ -7,5 +7,8 @@ const perfilController = {
         console.log(resultado);
         return res.render('detalleUsuario', {usuario:resultado})   
     },
+    index: function (req, res) {
+        return res.render('index', {posteos : perfil.posteos})
+    }
 }
 module.exports = perfilController

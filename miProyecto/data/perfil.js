@@ -96,6 +96,17 @@ const perfil =
         }
         return resultado
     },
+    detallePosteo: function(id_usuario){
+        let resultado = {};
+        for (let i = 0; i < perfil.posteos.length; i++) {
+            if(id_usuario ==perfil.posteos[i].id_Usuario){
+                resultado = perfil.posteos[i]
+            }
+             
+        }
+        return resultado
+    },
+    
     
     
 }

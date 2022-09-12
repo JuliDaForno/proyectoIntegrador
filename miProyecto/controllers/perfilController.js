@@ -7,6 +7,15 @@ const perfilController = {
         console.log(resultado);
         return res.render('detalleUsuario', {usuario:resultado})   
     },
-    
+    detallePosteo: function(req,res){
+        let id_usuario = req.params.id_usuario
+        let posteo= perfil.detallePosteo(id_usuario);
+        res.send(posteo)
+        let resultado = perfil.detallePosteo
+    },
+    register:(req,res)=>{
+        res.render('registracion')
+      }
+
 }
 module.exports = perfilController

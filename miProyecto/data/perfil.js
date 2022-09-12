@@ -34,4 +34,4 @@ const perfil =
     }
     
 }
-module.exports = perfil
+module.exports = perfil;

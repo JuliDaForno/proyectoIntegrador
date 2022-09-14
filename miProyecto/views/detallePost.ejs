@@ -6,15 +6,25 @@
 <body>
     <%- include('../partials/header') %>
 
+
+<body>
+
+
     <main>
         <div class="post-detail container">
             <section class="center main-content post">
                 <div class="info-usuario">
                     <img src="https://via.placeholder.com/40" alt="">
                     
+<<<<<<< HEAD
                     <p><a href="/users/usuario/<%= post.id_usuario%>"><%= post.nombre %> </a></p>
                 </div>
                 <img class="photo" src="/<%=post.posteo %> " alt="" >
+=======
+                    <p><a href="/users/perfil/<%= post.id_usuario%>"><%= post.nombre %> </a></p>
+                </div>
+                <img class="photo" src="/<%= post.imagen %> " alt="" >
+>>>>>>> 4e89d4f4e222cd02aa6720f187fb21b70c723587
             </section>
             <section class="right">
                 <h4>Comentarios</h4>
@@ -77,7 +87,7 @@
         </div>
     </main>
 
-    <%- include('../partials/footer') %>
+    <%- include('./partials/footer') %>
 
 </body>
 

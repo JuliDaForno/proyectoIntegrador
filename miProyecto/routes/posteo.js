@@ -1,7 +1,10 @@
 var express = require('express');
 var router = express.Router();
-const perfilController= require('../controllers/perfilController');
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+    res.send('respond with a resource');
+  });
+const postController= require('../controllers/postController');
 
-
-router.get('/id_usuario/:id_usuario', perfilController.detallePosteo);
+router.get('/detalle/:id_usuario', postController.detallePosteo)
 module.exports = router;

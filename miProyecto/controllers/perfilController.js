@@ -6,14 +6,9 @@ const perfilController = {
         let resultado = perfil.detalleUsuario(id);
         let posteos = perfil.detallePosteo(id);
         console.log(resultado);
-        
-        return res.render('detalleUsuario', {usuario:resultado, posteos: posteos})   
+        return res.render('detalleUsuario', {usuario:resultado, posteos:posteos})   
+       
 
-    },
-    detallePosteo: function(req,res){
-        let id_usuario = req.params.id_usuario
-        let posteo= perfil.detallePosteo(id_usuario);
-        return res.render('detallePost', {post:posteo})
     },
     register:(req,res)=>{
         res.render('registracion')
@@ -21,6 +16,12 @@ const perfilController = {
 
     index: function (req, res) {
         return res.render('index', {posteos : perfil.posteos})
+    },
+    login: function(req, res){
+        return res.render('login')
+    },
+    miPerfil: function(req,res){
+        return res.render('miPerfil')
     }
 }
 module.exports = perfilController

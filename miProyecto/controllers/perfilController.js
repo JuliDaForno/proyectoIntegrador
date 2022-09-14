@@ -4,8 +4,10 @@ const perfilController = {
     detalleUsuario: function (req,res) {
         let id = req.params.id;
         let resultado = perfil.detalleUsuario(id);
+        let posteos = perfil.detallePosteo(id);
         console.log(resultado);
         return res.render('detalleUsuario', {usuario:resultado, posteos:posteos})   
+       
 
     },
     register:(req,res)=>{
@@ -14,6 +16,12 @@ const perfilController = {
 
     index: function (req, res) {
         return res.render('index', {posteos : perfil.posteos})
+    },
+    login: function(req, res){
+        return res.render('login')
+    },
+    miPerfil: function(req,res){
+        return res.render('miPerfil')
     }
 }
 module.exports = perfilController

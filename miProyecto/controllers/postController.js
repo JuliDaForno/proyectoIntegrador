@@ -5,5 +5,8 @@ const postController = {
         let post= perfil.detallePosteo(idPost);
         return res.render('detallePost', {post:post})
     },
+    agregar: function(req,res){
+        res.render('agregarPost')
+    }
 }
 module.exports = postController

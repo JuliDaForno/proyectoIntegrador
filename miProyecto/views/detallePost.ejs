@@ -11,9 +11,10 @@
             <section class="center main-content post">
                 <div class="info-usuario">
                     <img src="https://via.placeholder.com/40" alt="">
-                    <p><a href="/users/usuario/<%= post.id_usuario %> "><%= post.nombre %> </a></p>
+                    
+                    <p><a href="/users/usuario/<%= post.id_usuario%>"><%= post.nombre %> </a></p>
                 </div>
-                <img class="photo" src="/<%= post.posteo %> " alt="" >
+                <img class="photo" src="/<%=post.posteo %> " alt="" >
             </section>
             <section class="right">
                 <h4>Comentarios</h4>

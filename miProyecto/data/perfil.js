@@ -7,7 +7,7 @@ const perfil =
             seguidores: '151 mill.',
             publicaciones: '3.541',
             seguidos: '1.755',
-            fotoPerfil:'images/poste2Noah.jpeg', 
+            fotoPerfil:'images/fotoPerfilZendaya.jpg', 
            
 
         },
@@ -16,7 +16,6 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-            fotoPerfil:'images/fotoPerfilZendaya.jpg', 
             fotoPerfil:'images/posteo2Noah.jpeg', 
             id:5,
 
@@ -52,32 +51,57 @@ const perfil =
     ],
     posteos:[
         {
+            id: 8,
         id_Usuario: 3,
         nombre: 'zendaya',
-        posteo:'images/posteoZendaya.jpg',
-        posteo2:'images/posteo2Zendaya.jpg'},
-        {
+        posteo:'images/posteoZendaya.jpg'},  
+        {id: 11,
+            id_Usuario: 3,   
+            posteo2:'images/posteo2Zendaya.jpg',
+        },
+        {id: 10,
             id_Usuario: 5,
             nombre: 'noah',
-            posteo:'images/posteo1Noah.jpeg',
-            posteo2:'images/poseteNoah.jpg'},
+            posteo:'images/posteo1Noah.jpg'},
+  
+            {   id: 9,
+                id_Usuario: 5,
+                posteo2:'images/poseteNoah.jpg'
+            },
             {
+                id: 1,
                 id_Usuario: 4,
                 nombre: 'Lady Gaga',
                 posteo:'images/ladygagaposteo1.jpeg',
-            posteo2:'images/ladygagaposteo2.jpg'},
+            },
             {
+                id: 3,
+                id_Usuario: 4,
+                posteo2:'images/ladygagaposteo2.jpg'   
+            },
+
+            {
+                id: 4,
                 id_Usuario:1,
                 nombre: 'Miley Cyrus',
                 posteo:'images/mileyposteo1.jpg',
-                posteo2:'images/mileyposteo2.jpg'},
+                },
+                {id: 7,
+                    id_Usuario:1,
+                  posteo2:'images/mileyposteo2.jpg'
+                },
 
   { 
+    id: 5,
     id_Usuario: 2,
                 nombre: 'Adele Blue',
                 posteo:'images/adeleposteo1.jpg',
-                posteo2:'images/adeleposteo2.jpg',
-               }
+               
+               },
+        {id_Usuario: 2,
+            id: 6,
+            posteo2:'images/adeleposteo2.jpg',
+        }
         
     ],
     comentario: [
@@ -89,12 +113,11 @@ const perfil =
     detalleUsuario: function(id){
         //console.log(id);
         let resultado = {};
-        let posteos= {}
         for (let i=0; i<perfil.usuarios.length; i++) {
             //console.log(perfil.usuarios[i]);
             if (id==perfil.usuarios[i].id) {
                 //console.log('dentro del if');
-                resultado=perfil.usuarios[i] 
+                resultado=perfil.usuarios[i]
             }     
         }
         return resultado

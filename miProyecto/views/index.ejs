@@ -12,14 +12,14 @@
             <article class="post">
                 <% for( let i = 0; i <posteos.length; i++ ) { %>
                     <div class="info-usuario ">
-                        <img src="/<%= posteos[i].posteo %>" alt="">
+                        <img src="/<%= posteos[i].imagen %>" alt="">
                         <h4>
-                            <a href="/users/usuario/<%= posteos[i].id_Usuario %> "> <%= posteos[i].nombre %></a>
+                            <a href="/users/perfil/<%= posteos[i].nombre %> "> <%= posteos[i].nombre %></a>
                         </h4>
                     </div>
                     <div class="post-body">
                         <a href="/posts/detalle/<%= posteos[i].id %> > ">
-                            <img src="/<%= posteos[i].posteo2 %>" alt="">
+                            <img src="/<%= posteos[i].imagen %>" alt="">
                         </a>
                     </div>
                     <ul class="post-reacciones">
@@ -41,7 +41,7 @@
                                 <a href="detalleUsuario.ejs">Usuario</a>
                                 <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
                             </li>
-                            <a href="detallePost.ejs">Ver más...</a>
+                            <a href="/posts/detalle/1">Ver más...</a>
                         </ul>
                     </div>
                     <% } %>

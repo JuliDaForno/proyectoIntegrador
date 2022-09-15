@@ -6,7 +6,7 @@ const perfilController = {
         let resultado = perfil.detalleUsuario(id);
         let posteos = perfil.detallePosteo(id);
         console.log(resultado);
-        return res.render('detalleUsuario', {usuario:resultado, posteos:posteos})   
+        return res.render('detalleUsuario', {usuario:resultado, posteos: perfil.posteos})   
        
 
     },

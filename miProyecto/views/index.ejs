@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head') %>
+    <%- include('./partials/head') %>
 
 <body>
-    <%- include('../partials/header') %>
+    <%- include('./partials/header') %>
 
     <main>
         <section class="center main-content">
@@ -12,14 +12,14 @@
             <article class="post">
                 <% for( let i = 0; i <posteos.length; i++ ) { %>
                     <div class="info-usuario ">
-                        <img src="/<%= posteos[i].imagen %>" alt="">
+                        <img class="fotoPerfil" src="<%= posteos[i].fotoPerfil %>" alt="">
                         <h4>
-                            <a href="/users/perfil/<%= posteos[i].nombre %> "> <%= posteos[i].nombre %></a>
+                            <a href="/users/perfil/<%= posteos[i].id_usuario %>"> <%= posteos[i].nombre %></a>
                         </h4>
                     </div>
                     <div class="post-body">
-                        <a href="/posts/detalle/<%= posteos[i].id %> > ">
-                            <img src="/<%= posteos[i].imagen %>" alt="">
+                        <a href="/posts/detalle/<%= posteos[i].id %>">
+                            <img src="<%= posteos[i].posteo %>" alt="">
                         </a>
                     </div>
                     <ul class="post-reacciones">
@@ -34,25 +34,22 @@
                         <h4>Comentarios</h4>git
                         <ul>
                             <li>
-                                <a href="detalleUsuario.ejs">Usuario</a>
-                                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
+                                <a href="/users/usuario/<%= posteos[i].id_usuario %>"> <%= posteos[i].nombre %> </a>
+                                <span> <%= posteos[i].comentarios[0].comentario %> </span>
                             </li>
                             <li>
-                                <a href="detalleUsuario.ejs">Usuario</a>
-                                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
+                                <a href="/users/usuario/<%= posteos[i].id_usuario %>"> <%= posteos[i].nombre %> </a>
+                                <span> <%= posteos[i].comentarios[1].comentario %></span>
                             </li>
                             <a href="/posts/detalle/1">Ver más...</a>
                         </ul>
                     </div>
                     <% } %>
                 </article>
-
-
-            
         </section>    
     </main>
 
-    <%- include('../partials/footer')  %> 
+    <%- include('./partials/footer')  %> 
 
 </body>
 

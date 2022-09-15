@@ -6,12 +6,9 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 router.get('/register',perfilController.register)
-<<<<<<< HEAD
 router.get('/perfil/:id', perfilController.detalleUsuario);
 
-=======
 router.get('/usuario/:id', perfilController.detalleUsuario);
 router.get('/login' , perfilController.login)
 router.get('/miPerfil', perfilController.miPerfil)
->>>>>>> e88b060f7d4eeef27100d862f72be6e2c440fa85
 module.exports = router;

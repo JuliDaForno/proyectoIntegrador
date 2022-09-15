@@ -9,13 +9,34 @@
         <section class="center main-content">
         <h1>Regsitrate</h1>
         <p>Crear el formulario para registrar un nuevo usuario.</p>
-        <form action="/users/register" method="post">
+        <form action="/users/login" method="post">
+<div>
+    <label for="email"> Email</label>
+    <input type="email" name="email" id="" placeholder="Coloca tu mail">
+</div>
+<div>
+    <label for="password"> Contraseña</label>
+    <input type="password" name="password">
+</div>
+<div>
+    <label for="fotoperfil"> Foto de perfil</label>
+    <input type="text" name="fotoperfil" placeholder="Coloca tu foto">
+</div>
+<div>
+    <label for="fecha"> Fecha de nacimiento</label>
+    <input type="date" name="fecha" placeholder="Coloca tu fecha de nacimiento">
+</div>
+<div>
+    <label for="dni">DNI</label>
+    <input type="number" name="dni" placeholder="Coloca tu DNI">
+</div>
+<button type="submit">Registrate</button>
 
         </form>
         </section>
     </main>
 
-    <%- include('../partials/footer') %> 
+    <%- include('./partials/footer') %> 
 
 </body>
 

@@ -9,7 +9,23 @@
     <main>
         <section class="center main-content">
         <h1>Nuevo Post</h1>
-        <p>Crear el formulario para cargar un nuevo posteo.</p>
+        <form action="/users/login" method="post">
+            <div>
+                <label for="usuario"> Id usuario</label>
+                <input type="number" name="usuario"  placeholder="Id del usuario">
+            </div>
+            <div>
+                <label for="imagen"> Imagen</label>
+                <input type="text" name="imagen  placeholder="Id del usuario">
+            </div>
+            <div>
+                <label for="post"> Texto</label>
+                <input type="text" name="post"  placeholder="Escribe un texto">
+            </div>
+            
+            <button type="submit">Registrate</button>
+            
+                    </form>
         </section>
     </main>
 

@@ -6,6 +6,6 @@ router.get('/', function(req, res, next) {
   });
 const postController= require('../controllers/postController');
 
-router.get('/detalle/:id_usuario', postController.detallePosteo)
 router.get('/agregar', postController.agregar)
+router.get('/detalle/:id', postController.detallePosteo);
 module.exports = router;

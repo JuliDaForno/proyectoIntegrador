@@ -7,7 +7,6 @@ const perfilController = {
         let posteos = perfil.detallePosteo(id);
         console.log(resultado);
         return res.render('detalleUsuario', {usuario:resultado, posteos:posteos})   
-       
 
     },
     register:(req,res)=>{

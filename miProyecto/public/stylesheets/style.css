@@ -98,6 +98,10 @@ main {
   color: #777;
   margin-bottom: 20px;
 }
+.fotoPerfil{
+  width: 40px;
+  height: 40px;
+}
 .post-body img {
   width: 100%;
 }

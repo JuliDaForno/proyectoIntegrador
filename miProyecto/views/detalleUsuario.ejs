@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head') %>
+    <%- include('./partials/head') %>
 
 
 <body>
-    <%- include('../partials/header') %> 
+    <%- include('./partials/header') %> 
 
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="/<%=usuario.fotoPerfil%>" alt="">
+                <img class="profile" src="<%=usuario.fotoPerfil%>" alt="">
                 <div class="info-usuario">
 
                     <p><%= usuario.nombre %> </p> 
@@ -24,20 +24,20 @@
             </section>
             <section class="bottom">
                 <article class="post">
-                    <a href="/posts/detalle/3<%= posteos.posteo2 %> ">
-                        <img src="/<%= posteos.posteo %>" alt="">
+                    <a href="/posts/detalle/3<%= posteos.id %> ">
+                        <img src="<%=posteos.posteo %>" alt="">
                     </a>
                 </article>
                 <article class="post">
                     <a href="detallePost.html">
-                        <img src="/<%= posteos.posteo %>" alt="">
+                        <img src="<%=posteos.posteo%>" alt="">
                     </a>
                 </article>
             </section>
         </div>
     </main>
 
-    <%- include('../partials/footer') %> 
+    <%- include('./partials/footer') %> 
     
 </body>
 

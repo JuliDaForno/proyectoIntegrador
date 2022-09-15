@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head') %>
+    <%- include('./partials/head') %>
 
 <body>
-    <%- include('../partials/header') %>
+    <%- include('./partials/header') %>
 
 
 <body>
@@ -14,7 +14,7 @@
         <div class="post-detail container">
             <section class="center main-content post">
                 <div class="info-usuario">
-                    <img src="https://via.placeholder.com/40" alt="">
+                    <img class="fotoPerfil" src="<%=post.fotoPerfil%> " alt="">
                     
                     <p><a href="/users/usuario/<%= post.id_usuario%>"><%= post.nombre %> </a></p>
                 </div>
@@ -31,14 +31,14 @@
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <a class="user" href="/users/usuario/2">Nombre</a>
+                                <a class="user" href="detalleUsuario.html">Nombre</a>
                                 <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur temporibus maxime voluptas</span>
                             </section>
                         </article>
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <a class="user" href="/users/usuario/2">Nombre</a>
+                                <a class="user" href="detalleUsuario.html">Nombre</a>
                                 <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur temporibus maxime
                                     voluptas</span>
                             </section>
@@ -46,7 +46,7 @@
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <a class="user" href="/users/usuario/2">Nombre</a>
+                                <a class="user" href="detalleUsuario.html">Nombre</a>
                                 <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur temporibus maxime
                                     voluptas</span>
                             </section>
@@ -54,7 +54,7 @@
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <a class="user" href="/users/usuario/2">Nombre</a>
+                                <a class="user" href="detalleUsuario.html">Nombre</a>
                                 <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur temporibus maxime
                                     voluptas</span>
                             </section>
@@ -62,7 +62,7 @@
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <a class="user" href="/users/usuario/2">Nombre</a>
+                                <a class="user" href="detalleUsuario.html">Nombre</a>
                                 <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur temporibus maxime
                                     voluptas</span>
                             </section>
@@ -70,7 +70,7 @@
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <a class="user" href="/users/usuario/2">Nombre</a>
+                                <a class="user" href="detalleUsuario.html">Nombre</a>
                                 <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur temporibus maxime
                                     voluptas</span>
                             </section>

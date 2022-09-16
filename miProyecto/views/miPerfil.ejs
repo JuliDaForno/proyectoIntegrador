@@ -21,6 +21,15 @@
                 </div>
             </section>
             <section class="bottom">
+                <% for(let i= 0; i <post.lenght; i++){%> 
+                    <article class="post">
+                        <a href="/post/detallePost">
+                            <img src="<% posteos[i].imagen %> "alt="">
+                            <p> <%posteos[i].comentario %> </p>
+                        </a>
+                    </article>
+                    <% }  %> 
+                
                 <article class="post">
                     <a href="detallePost.html">
                         <img src=""alt="">

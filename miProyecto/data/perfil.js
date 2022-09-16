@@ -333,10 +333,10 @@ const perfil =
 
     },
     detallePosteo: function(id){
-        let resultado = {};
+        let resultado = [];
         for (let i = 0; i < perfil.posteos.length; i++) {
-            if(id==perfil.posteos[i].id){
-                resultado = perfil.posteos[i]
+            if(id==perfil.posteos[i].usuario_id){
+                resultado.push(perfil.posteos[i])
             }
              
         }

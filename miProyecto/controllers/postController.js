@@ -7,6 +7,10 @@ const postController = {
     },
     agregar: function(req,res){
         res.render('agregarPost')
+    },
+    comentarios: function(req, res){
+        
     }
+    
 }
 module.exports = postController

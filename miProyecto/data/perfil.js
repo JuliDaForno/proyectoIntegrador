@@ -57,12 +57,15 @@ const perfil =
                 {
                     id_usuario: 4,
                     nombre: 'Lady Gaga',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/ladygagaFotoperfil.jpg'
                 }, 
                 {
                     id_usuario: 5,
                     nombre: 'noah schnapp',
-                    comentario: 'Muy linda publicacion'
+                    comentario: 'Muy linda publicacion',
+                    fotoPerfil:'/images/posteo2Noah.jpeg'
+
                 }
             ]
             
@@ -77,12 +80,14 @@ const perfil =
                 {
                     id_usuario: 4,
                     nombre: 'Lady Gaga',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/ladygagaFotoperfil.jpg'
                 }, 
                 {
                     id_usuario: 1,
                     nombre: 'Miley cyrus',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/mileyfotoPerfil.jpg'
                 }
             ]  
         },
@@ -96,12 +101,14 @@ const perfil =
                 {
                     id_usuario: 4,
                     nombre: 'Lady Gaga',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/ladygagaFotoperfil.jpg'
                 }, 
                 {
                     id_usuario: 1,
                     nombre: 'Miley cyrus',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/mileyfotoPerfil.jpg'
                 }
             ]
         },
@@ -116,12 +123,15 @@ const perfil =
                 {
                     id_usuario: 4,
                     nombre: 'Lady Gaga',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/ladygagaFotoperfil.jpg'
                 }, 
                 {
                     id_usuario: 1,
                     nombre: 'Miley cyrus',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/mileyfotoPerfil.jpg'
+
                 }
             ]
         },
@@ -135,12 +145,15 @@ const perfil =
                 {
                     id_usuario: 3,
                     nombre: 'zendaya',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/fotoPerfilZendaya.jpg',
+
                 }, 
                 {
                     id_usuario: 1,
                     nombre: 'Miley cyrus',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/mileyfotoPerfil.jpg'
                 }
             ]
         },
@@ -154,12 +167,15 @@ const perfil =
                 {
                     id_usuario: 3,
                     nombre: 'zendaya',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/fotoPerfilZendaya.jpg',
                 }, 
                 {
                     id_usuario: 1,
                     nombre: 'Miley cyrus',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/mileyfotoPerfil.jpg'
+
                 }
             ] 
         },
@@ -173,12 +189,15 @@ const perfil =
                 {
                     id_usuario: 3,
                     nombre: 'zendaya',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/fotoPerfilZendaya.jpg',
                 }, 
                 {
                     id_usuario: 5,
                     nombre: 'noah schnapp',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/posteo2Noah.jpeg',
+
                 }
             ]
         },
@@ -192,12 +211,15 @@ const perfil =
                 {
                     id_usuario: 3,
                     nombre: 'zendaya',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/fotoPerfilZendaya.jpg'
                 }, 
                 {
                     id_usuario: 5,
                     nombre: 'noah schnapp',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/posteo2Noah.jpeg'
+
                 }
             ]
         },
@@ -211,12 +233,15 @@ const perfil =
                 {
                     id_usuario: 3,
                     nombre: 'zendaya',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/fotoPerfilZendaya.jpg'
+                    
                 }, 
                 {
                     id_usuario: 5,
                     nombre: 'noah schnapp',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/posteo2Noah.jpeg'
                 }
             ]
                
@@ -231,12 +256,14 @@ const perfil =
                 {
                     id_usuario: 3,
                     nombre: 'zendaya',
-                    comentario: 'Hermosa foto'
+                    comentario: 'Hermosa foto',
+                    fotoPerfil:'/images/fotoPerfilZendaya.jpg'
                 }, 
                 {
                     id_usuario: 5,
                     nombre: 'noah schnapp',
-                    comentario: 'Me gusta tu foto'
+                    comentario: 'Me gusta tu foto',
+                    fotoPerfil:'/images/posteo2Noah.jpeg'
                 }
             ]
         }

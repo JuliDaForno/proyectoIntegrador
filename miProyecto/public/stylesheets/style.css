@@ -188,6 +188,7 @@ main {
 }
 .post-detail .right {
   width: 50%;
+  padding: 15px;
 }
 .comments div {
   margin-top: 20px;

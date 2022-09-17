@@ -351,6 +351,16 @@ const perfil =
             
         }
         return resultado
+    },
+    misPosteos: function (id) {
+      let misPosteos= [];
+      for (let i = 0; i< perfil.posteos.length; i++) {
+        if(id==perfil.posteos[i].id_usuario){
+            misPosteos.push(perfil.posteos[i])
+        }
+       
+      } 
+      return misPosteos
     }
         
     }

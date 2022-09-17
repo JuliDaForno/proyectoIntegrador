@@ -22,7 +22,7 @@ const perfilController = {
     miPerfil: function(req, res){
         let id = req.params.id
         let usuario = perfil.detalleUsuario(id)
-        let resultado = perfil.detallePosteo(id)
+        let resultado = perfil.misPosteos(id)
         return res.render('miPerfil',{usuario: usuario, posteos: resultado} )
     }
 }

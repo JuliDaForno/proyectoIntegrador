@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
 });
 router.get('/register',perfilController.register)
 router.get('/perfil/:id', perfilController.detalleUsuario);
-router.get('/miPerfil',perfilController.miPerfil )
+router.get('/miPerfil/:id',perfilController.miPerfil )
 router.get('/login' , perfilController.login)
+router.get('/editarPerfil', perfilController.editarPerfil)
 module.exports = router;

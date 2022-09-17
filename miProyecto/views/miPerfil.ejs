@@ -9,7 +9,7 @@
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="/images/<%= usuario.fotoPerfil %>" alt="">
+                <img class="profile" src="<%=usuario.fotoPerfil%>" alt="">
                 <div class="info-usuario">
                     <p><%= usuario.nombre %></p> 
                     <a class="follow" href="editarPerfil.html"><i class="fa-solid fa-user-gear"></i></a>
@@ -21,8 +21,6 @@
                 </div>
             </section>
             <section class="bottom">
-            
-
                 <% for(let i = 0; i < posteos.length; i++){ %>
                 <article class="post">
                     <a href="/posts/detalle/<%= posteos[i].id %> ">

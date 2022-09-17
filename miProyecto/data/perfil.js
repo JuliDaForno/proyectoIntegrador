@@ -7,7 +7,11 @@ const perfil =
             seguidores: '151 mill.',
             publicaciones: '3.541',
             seguidos: '1.755',
-            fotoPerfil:'/images/fotoPerfilZendaya.jpg'
+            fotoPerfil:'/images/fotoPerfilZendaya.jpg',
+            mail: 'zendaya@gmail.com',
+            contrasenia: 'zendaya100',
+            fecha: '01-09-1996',
+            dni: '57.818.155'
         },
         {
             id: 5,
@@ -15,7 +19,11 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-            fotoPerfil:'/images/posteo2Noah.jpeg'
+            fotoPerfil:'/images/posteo2Noah.jpeg',
+            mail: 'zendaya@gmail.com',
+            contrasenia: 'zendaya100',
+            fecha: '01-09-1996',
+            dni: '57.818.155'
         },
         {
             id: 4,
@@ -23,7 +31,11 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-            fotoPerfil:'/images/ladygagaFotoperfil.jpg'
+            fotoPerfil:'/images/ladygagaFotoperfil.jpg',
+            mail: 'zendaya@gmail.com',
+            contrasenia: 'zendaya100',
+            fecha: '01-09-1996',
+            dni: '57.818.155'
         },
         {
             id: 1,
@@ -31,7 +43,11 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-            fotoPerfil:'/images/mileyfotoPerfil.jpg'
+            fotoPerfil:'/images/mileyfotoPerfil.jpg',
+            mail: 'zendaya@gmail.com',
+            contrasenia: 'zendaya100',
+            fecha: '01-09-1996',
+            dni: '57.818.155'
 
         },
         {
@@ -40,7 +56,11 @@ const perfil =
             seguidores: '27,5 mill.',
             publicaciones: '190',
             seguidos: '2.635',
-            fotoPerfil:'/images/adeleFotoPerfil.jpg'
+            fotoPerfil:'/images/adeleFotoPerfil.jpg',
+            mail: 'zendaya@gmail.com',
+            contrasenia: 'zendaya100',
+            fecha: '01-09-1996',
+            dni: '57.818.155'
         },
         
     ],

@@ -1,7 +1,7 @@
 
 *{
   box-sizing: border-box;
-  background-color:violet;
+  background-color:rgb(248, 247, 248);
   color: #000;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
@@ -182,13 +182,13 @@ main {
   max-width: 770px;
 }
 .post-detail .main-content {
-  max-width: 64%;
+  max-width: 50%;
 }
 .post-detail .photo {
   width: 100%;
 }
 .post-detail .right {
-  width: 34%;
+  width: 50%;
 }
 .comments div {
   margin-top: 20px;
@@ -245,7 +245,8 @@ main {
 
 .user-detail{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }

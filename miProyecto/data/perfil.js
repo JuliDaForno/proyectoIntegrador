@@ -333,17 +333,25 @@ const perfil =
 
     },
     detallePosteo: function(id){
-        let resultado = [];
+        let resultado ={};
         for (let i = 0; i < perfil.posteos.length; i++) {
-            if(id==perfil.posteos[i].usuario_id){
-                resultado.push(perfil.posteos[i])
+            if(id==perfil.posteos[i].id){
+                resultado=perfil.posteos[i]
             }
              
         }
         return resultado
     },
-    
-
+    posteosDeCadaUsuario: function(id){
+        let resultado = [];
+        for(let i = 0; i < perfil.posteos.length; i++) {
+            if(id==perfil.posteos[i].id_usuario){
+                resultado.push(perfil.posteos[i])
+            }
+            
+        }
+        return resultado
+    }
         
     }
     

@@ -23,16 +23,13 @@
                 </div>
             </section>
             <section class="bottom">
-                <article class="post">
-                    <a href="/posts/detalle/3<%= posteos.id %> ">
-                        <img src="<%=posteos.posteo %>" alt="">
-                    </a>
-                </article>
-                <article class="post">
-                    <a href="detallePost.html">
-                        <img src="<%=posteos.posteo%>" alt="">
-                    </a>
-                </article>
+                    <% for( let i = 0; i < posteos.length; i++ ) { %>
+                    <article class="post">
+                        <a href="/posts/detalle/<%=posteos[i].id %> ">
+                            <img src="<%=posteos[i].posteo %>" alt="">
+                        </a>
+                    </article>
+                    <% } %>         
             </section>
         </div>
     </main>

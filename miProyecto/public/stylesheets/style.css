@@ -308,3 +308,6 @@ main {
   flex-direction: row;
   justify-content: space-around;
 }
+.search{
+  list-style-type: circle;
+}

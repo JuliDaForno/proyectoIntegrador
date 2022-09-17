@@ -24,6 +24,9 @@ const perfilController = {
         let usuario = perfil.detalleUsuario(id)
         let resultado = perfil.misPosteos(id)
         return res.render('miPerfil',{usuario: usuario, posteos: resultado} )
+    },
+    editarPerfil: function(req, res){
+        return res.render('editarPerfil')
     }
 }
 module.exports = perfilController

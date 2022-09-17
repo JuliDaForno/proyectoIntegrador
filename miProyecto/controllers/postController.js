@@ -10,5 +10,6 @@ const postController = {
         res.render('agregarPost')
     },
     
+    
 }
 module.exports = postController

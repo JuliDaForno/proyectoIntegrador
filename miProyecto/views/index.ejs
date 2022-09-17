@@ -8,9 +8,9 @@
 
     <main>
         <section class="center main-content">
-
+        <% for( let i = 0; i <posteos.length; i++ ) { %>
             <article class="post">
-                <% for( let i = 0; i <posteos.length; i++ ) { %>
+                
                     <div class="info-usuario ">
                         <img class="fotoPerfil" src="<%= posteos[i].fotoPerfil %>" alt="">
                         <h4>
@@ -31,21 +31,22 @@
                         </li>
                     </ul>
                     <div class="post-comentarios">
-                        <h4>Comentarios</h4>git
+                        <h4>Comentarios</h4>
                         <ul>
                             <li>
-                                <a href="/users/usuario/<%= posteos[i].id_usuario %>"> <%= posteos[i].nombre %> </a>
+                                <a href="/users/perfil/<%=posteos[i].id_usuario%>"> <%= posteos[i].comentarios[0].nombre %> </a>
                                 <span> <%= posteos[i].comentarios[0].comentario %> </span>
                             </li>
                             <li>
-                                <a href="/users/usuario/<%= posteos[i].id_usuario %>"> <%= posteos[i].nombre %> </a>
+                                <a href="/users/perfil/<%=posteos[i].id_usuario%>"> <%= posteos[i].comentarios[1].nombre %> </a>
                                 <span> <%= posteos[i].comentarios[1].comentario %></span>
                             </li>
-                            <a href="/posts/detalle/1">Ver más...</a>
+                            <a href="/posts/detalle/<%= posteos[i].id %>">Ver más...</a>
                         </ul>
                     </div>
-                    <% } %>
+                    
                 </article>
+            <% } %>
         </section>    
     </main>
 

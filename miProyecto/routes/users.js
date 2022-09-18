@@ -9,5 +9,8 @@ router.get('/register',perfilController.register)
 router.get('/perfil/:id', perfilController.detalleUsuario);
 router.get('/miPerfil/:id',perfilController.miPerfil )
 router.get('/login' , perfilController.login)
-router.get('/editarPerfil', perfilController.editarPerfil)
+
+router.get('/editarPerfil:/id', perfilController.editarPerfil)
+
+
 module.exports = router;

@@ -8,4 +8,4 @@ const homeController={
         return res.render('resultadoBusqueda')
     } 
 }
-module.exports = homeController
+module.exports = homeController 

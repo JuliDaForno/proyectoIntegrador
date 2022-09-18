@@ -273,48 +273,56 @@ const perfil =
     comentario: [{
         id_usuario: 1,
         id_posteo: 2,
+        nombre:'Miley Cyrus',
         comentario: 'Que linda foto',
         fotoPerfil:'/images/mileyfotoPerfil.jpg'
     },
     {
         id_usuario: 2,
         id_posteo: 2,
+        nombre: 'Adele Blue',
         comentario: 'Me gusta tu foto',
         fotoPerfil:'/images/adeleFotoPerfil.jpg'
     },
     {
         id_usuario: 3,
         id_posteo: 1,
+        nombre: 'Zendaya',
         comentario: 'Que hermosa',
         fotoPerfil:'/images/fotoPerfilZendaya.jpg'
     },
     {
         id_usuario: 4,
         id_posteo: 2,
+        nombre: 'Lady Gaga',
         comentario: 'Que linda foto',
         fotoPerfil:'/images/ladygagaFotoperfil.jpg'
     },
     {
         id_usuario: 5,
         id_posteo: 2,
+        nombre: 'Noah Schnapp',
         comentario: 'Me gusta tu foto',
         fotoPerfil:'/images/posteo2Noah.jpeg'
     },
     {
         id_usuario: 1,
         id_posteo: 2,
+        nombre: 'Miley Cyrus',
         comentario: 'Que linda foto',
         fotoPerfil:'/images/mileyfotoPerfil.jpg'
     },
     {
         id_usuario: 2,
         id_posteo: 1,
+        nombre: 'Adele Blue',
         comentario: 'Que linda foto',
         fotoPerfil:'/images/adeleFotoPerfil.jpg'
     },
     {
         id_usuario: 3,
         id_posteo: 2,
+        nombre: 'zendaya',
         comentario: 'Que linda foto',
         fotoPerfil:'/images/fotoPerfilZendaya.jpg'
     }

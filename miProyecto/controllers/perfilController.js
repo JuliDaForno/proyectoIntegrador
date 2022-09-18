@@ -5,7 +5,6 @@ const perfilController = {
         let id = req.params.id;
         let resultado = perfil.detalleUsuario(id);
         let posteos= perfil.posteosDeCadaUsuario(id)
-        console.log(resultado); 
         return res.render('detalleUsuario', {usuario:resultado, posteos:posteos});
     
     },

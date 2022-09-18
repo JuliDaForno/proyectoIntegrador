@@ -8,4 +8,5 @@ const postController= require('../controllers/postController');
 
 router.get('/agregar', postController.agregar)
 router.get('/detalle/:id', postController.detallePosteo);
+
 module.exports = router;

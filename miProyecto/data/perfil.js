@@ -8,7 +8,7 @@ const perfil =
             publicaciones: '3.541',
             seguidos: '1.755',
             fotoPerfil:'/images/fotoPerfilZendaya.jpg',
-            mail: 'zendaya@gmail.com',
+            email: 'zendaya@gmail.com',
             contrasenia: 'zendaya100',
             fecha: '01-09-1996',
             dni: '57.818.155'
@@ -20,7 +20,7 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/posteo2Noah.jpeg',
-            mail: 'noahschnapp@gmail.com',
+            email: 'noahschnapp@gmail.com',
             contrasenia: 'noahcoolguy',
             fecha: '03-10-2004',
             dni: '50.654.338'
@@ -32,7 +32,7 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/ladygagaFotoperfil.jpg',
-            mail: 'ladygaga@gmail.com',
+            email: 'ladygaga@gmail.com',
             contrasenia: 'astarisborn',
             fecha: '28-03-1986',
             dni: '30.990.712'
@@ -44,7 +44,7 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/mileyfotoPerfil.jpg',
-            mail: 'miley@gmail.com',
+            email: 'miley@gmail.com',
             contrasenia: 'hannahmontana4ever',
             fecha: '23-11-1992',
             dni: '53.438.087'
@@ -57,7 +57,7 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/adeleFotoPerfil.jpg',
-            mail: 'adele@gmail.com',
+            email: 'adele@gmail.com',
             contrasenia: 'adele22',
             fecha: '05-05-1988',
             dni: '29.818.155'

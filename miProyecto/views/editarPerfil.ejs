@@ -9,7 +9,7 @@
     <main>
         <section class="center main-content">
         <h1>Editar perfil</h1>
-        <form action="/users/miPerfil" method="get">
+        <form action="/users/miPerfil" method="post">
             <div>
                 <label for="email">E-mail</label>
                 <input type="email" name="email" value="<%=usuario[indice].email %> ">
@@ -28,7 +28,7 @@
             </div>
             <div>
                 <label for="fecha">Fecha de nacimiento</label>
-                <input type="date" name="fecha" value="<%=usuario[indice].fecha %> ">
+                <input type="text" name="fecha" value="<%=usuario[indice].fecha %> ">
             </div>
             <div>
                 <label for="DNI">DNI</label>

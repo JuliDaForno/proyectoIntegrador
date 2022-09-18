@@ -20,10 +20,10 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/posteo2Noah.jpeg',
-            mail: 'zendaya@gmail.com',
-            contrasenia: 'zendaya100',
-            fecha: '01-09-1996',
-            dni: '57.818.155'
+            mail: 'noahschnapp@gmail.com',
+            contrasenia: 'noahcoolguy',
+            fecha: '03-10-2004',
+            dni: '50.654.338'
         },
         {
             id: 4,
@@ -32,10 +32,10 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/ladygagaFotoperfil.jpg',
-            mail: 'zendaya@gmail.com',
-            contrasenia: 'zendaya100',
-            fecha: '01-09-1996',
-            dni: '57.818.155'
+            mail: 'ladygaga@gmail.com',
+            contrasenia: 'astarisborn',
+            fecha: '28-03-1986',
+            dni: '30.990.712'
         },
         {
             id: 1,
@@ -44,10 +44,10 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/mileyfotoPerfil.jpg',
-            mail: 'zendaya@gmail.com',
-            contrasenia: 'zendaya100',
-            fecha: '01-09-1996',
-            dni: '57.818.155'
+            mail: 'miley@gmail.com',
+            contrasenia: 'hannahmontana4ever',
+            fecha: '23-11-1992',
+            dni: '53.438.087'
 
         },
         {
@@ -57,10 +57,10 @@ const perfil =
             publicaciones: '190',
             seguidos: '2.635',
             fotoPerfil:'/images/adeleFotoPerfil.jpg',
-            mail: 'zendaya@gmail.com',
-            contrasenia: 'zendaya100',
-            fecha: '01-09-1996',
-            dni: '57.818.155'
+            mail: 'adele@gmail.com',
+            contrasenia: 'adele22',
+            fecha: '05-05-1988',
+            dni: '29.818.155'
         },
         
     ],

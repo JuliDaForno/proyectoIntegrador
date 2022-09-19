@@ -1,4 +1,4 @@
-const data = require('../data/perfil')
+const data = require('../data')
 const homeController={
     index: function (req,res) {
 
@@ -8,4 +8,4 @@ const homeController={
         return res.render('resultadoBusqueda')
     } 
 }
-module.exports = homeController 
+module.exports = homeController  

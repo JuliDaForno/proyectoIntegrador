@@ -1,4 +1,4 @@
-const perfil = require('../data/perfil')
+const perfil = require('../data/index')
 const postController = {
     detallePosteo: function(req,res){
         let id = req.params.id

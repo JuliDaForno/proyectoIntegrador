@@ -24,7 +24,10 @@ module.exports = function (sequelize, dataTypes) {
         updated_at: {
             type: dataTypes.DATE,
             allowNull: true,
-        },
+        },  delete_at: {
+            type: dataTypes.DATE,
+            allowNull: true,
+        }
     }
 
     let config ={
@@ -34,5 +37,5 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     let Comentario = sequelize.define(alias,cols, config);
-    
+    return Comentario;
 }

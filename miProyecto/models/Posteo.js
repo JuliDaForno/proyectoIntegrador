@@ -38,5 +38,16 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     let Posteo = sequelize.define(alias,cols, config);
+    
+    Posteo.associate = function(models) {
+        Posteo.hasMany( models.Comentario, {
+            as : 'comentario',
+            foreingKey : 'id_posteos'
+        }),
+        Posteo.belongsTo(models.Usuario, {
+        as: 'usuario',
+        foreingKey: 'id_usuarios'
+        })
+    }
     return Posteo ;
 }

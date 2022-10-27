@@ -1,10 +1,10 @@
 const data = require('../models')
-const usuario = data.Usuario;
+const posteo = data.Posteo;
 const op = data.Sequelize.Op;
 
 const homeController={
     index: function (req,res) {
-        usuario.findAll(criterios)
+        posteo.findAll()
         .then((result)=>{
             return res.render('index', {posteos: result})
         });
@@ -21,7 +21,7 @@ const homeController={
                 }
             ]
         };
-        usuario.findByPk(id, relaciones)
+        usuario.findByPk(id)
         .then((result)=>{
             return res.render('resultadoBusqueda', {usuario:result})
         })

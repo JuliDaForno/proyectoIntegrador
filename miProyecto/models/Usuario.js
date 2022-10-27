@@ -31,15 +31,15 @@ module.exports = function (sequelize, dataTypes) {
         foto: {
             type: dataTypes.STRING
         },
-        created_at: {
+        createdAT: {
             type: dataTypes.DATE,
             allowNull: true,
         },
-        updated_at: {
+        updatedAt: {
             type: dataTypes.DATE,
             allowNull: true,
         },
-        delete_at: {
+        deletedAt: {
             type: dataTypes.DATE,
             allowNull: true,
         }

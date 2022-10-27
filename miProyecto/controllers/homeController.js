@@ -7,7 +7,9 @@ const homeController={
         posteo.findAll()
         .then((result)=>{
             return res.render('index', {posteos: result})
-        });
+        }).catch((error)=>{
+            return console.log(error)
+        })
 
         
     },

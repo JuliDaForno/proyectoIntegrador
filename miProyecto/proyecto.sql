@@ -53,7 +53,7 @@ INSERT INTO usuario values (default, 'Miley', 	'Cyrus', 	'mcyrus', 	'mcyrus@gmai
 INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue', 	'ablue@gmail.com',	'4563','1988-05-05',	35674663, '/img/usuarios/lady.png', default, default, default);
 
 INSERT INTO posteo  values (default, 1 , '/img/usuarios/mc.png', 'Hola', default, default, default);
-INSERT INTO  posteo values (default, 2 , '/img/usuarios/mc.png', 'Hola', default, default, default);
+INSERT INTO posteo values (default, 2 , '/img/usuarios/mc.png', 'Hola', default, default, default);
 INSERT INTO posteo values (default, 3 , '/img/usuarios/mc.png', 'Hola', default, default, default);
 INSERT INTO posteo values (default, 4 , '/img/usuarios/mc.png', 'Hola', default, default, default);
 INSERT INTO posteo values (default, 5 , '/img/usuarios/mc.png', 'Hola', default, default, default);

@@ -33,19 +33,21 @@ module.exports = function (sequelize, dataTypes) {
     let config ={
         tableName: "comentario",
         timestamps: false,
-        underscored: true,
+        underscored: false,
     }
 
     let Comentario = sequelize.define(alias,cols, config);
     Comentario.associate = function(models) {
-       Comentario.belongsTo( models.Posteo, {
+       Comentario.belongsTo(models.Posteo, {
              as : 'posteo',
-             foreignKey : 'id_posteos'
+             foreignKey : 'id_posteos',
+             onDelete:'cascade'
          }),
-         Comentario.belongsTo( models.Usuario, {
+         Comentario.belongsTo(models.Usuario, {
              as : 'usuario',
              foreignKey : 'id_usuarios',
-             timestamps:false
+             timestamps:false,
+             onDelete:'cascade'
          })
         }
     return Comentario;

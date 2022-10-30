@@ -4,7 +4,11 @@ const op = data.Sequelize.Op;
 
 const homeController={
     index: function (req,res) {
-        posteo.findAll()
+        let relaciones = {
+            all:true,
+            nested:true
+        }
+        posteo.findAll(relaciones)
         .then((result)=>{
             return res.render('index', {posteos: result})
         }).catch((error)=>{

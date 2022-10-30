@@ -41,12 +41,15 @@ module.exports = function (sequelize, dataTypes) {
     Posteo.associate = function(models) {
         Posteo.hasMany( models.Comentario, {
             as : 'comentario',
-            foreingKey : 'id_posteos'
-        }),
-        Posteo.belongsTo(models.Usuario, {
-        as: 'usuario',
-        foreingKey: 'id_usuarios'
+            foreingKey : 'id_posteos',
+            onDelete:'cascade'
         })
+        
+        // Posteo.belongsTo(models.Usuario, {
+        // as: 'usuario',
+        // foreingKey: 'id_usuarios',
+        // onDelete:'cascade'
+        // })
     }
     return Posteo ;
 }

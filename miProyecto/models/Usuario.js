@@ -53,7 +53,7 @@ module.exports = function (sequelize, dataTypes) {
 
     let Usuario = sequelize.define(alias, cols, config);
     Usuario.associate = function(models) {
-       Usuario.belongsTo(models.Posteo, {
+       Usuario.hasMany(models.Posteo, {
             as : 'posteo',
             foreignKey : 'id_usuarios',
             onDelete:'cascade'
@@ -61,7 +61,7 @@ module.exports = function (sequelize, dataTypes) {
         Usuario.hasMany(models.Comentario, {
             as : 'comentario',
             foreignKey : 'id_usuarios',
-            timestamps:false,
+            timestamps: false,
             onDelete: 'cascade'
         })
     }

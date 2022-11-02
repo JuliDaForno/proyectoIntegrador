@@ -12,14 +12,14 @@
             <article class="post">
                  
                     <div class="info-usuario ">
-                        <img class="fotoPerfil" src="<%= posteo[i].fotoPerfil %>" alt="">
+                        <img class="fotoPerfil" src="<%=posteo[i].foto %>" alt="">
                         <h4>
-                            <a href="/users/perfil/<%= posteo[i].id_usuario %>"><%=posteo[i].nombre %></a>
+                            <a href="/users/perfil/<%=posteo[i].id_usuarios %>"><%=posteo[i].nombre %></a>
                         </h4>
                     </div>
                     <div class="post-body">
                         <a href="/posts/detalle/<%=posteo[i].id %>">
-                            <img src="<%=posteo[i].posteo%>" alt="">
+                            <!-- <img src="<%=posteo[i].image_name%>" alt=""> -->
                         </a>
                     </div>
                     <ul class="post-reacciones">
@@ -34,12 +34,12 @@
                         <h4>Comentarios</h4>
                         <ul>
                             <li>
-                                <a href="/users/perfil/<% posteo[i].id_usuarios%>"> <%= usuario.nombre %> </a>
-                                <span> <%= comentario[i].texto_comentario %> </span>
+                                <a href="/users/perfil/<% posteo[i].id_usuarios%>"> <%= posteo[i].nombre %> </a>
+                                <span> <%= posteo[i].texto_comentario %> </span>
                             </li>
                             <li>
-                                <a href="/users/perfil/<%= posteo[i].id_usuarios%>"> <%= comentario[i].nombre %> </a>
-                                <span> <%= comentario[i].texto_comentario %></span>
+                                <a href="/users/perfil/<%= posteo[i].id_usuarios%>"> <%= posteo[i].nombre %> </a>
+                                <span> <%= posteo[i].texto_comentario %></span>
                             </li>
                             <a href="/posts/detalle/<%= posteo[i].id %>">Ver más...</a>
                         </ul>

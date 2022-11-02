@@ -1,7 +1,27 @@
-const perfil = require('../data/index');
+const db = require('../database/models');
+const usuario = db.Usuario
+const op = db.Sequelize.Op;
 const perfilController = {
+    //Buscar por el id de usuario
     detalleUsuario: function (req,res) {
         let id = req.params.id;
+        let relaciones ={
+            include:[
+                {
+                    all:true,
+                    nested:true
+                }
+            ]
+        };
+        usuario.findByPk(id, relaciones)
+        .then((result)=>{
+            return res.render('detalleUsuario', {usuario:result})
+
+        })
+        .catch((err)=>{
+            return res.redirect('/')
+        })
+
         let resultado = perfil.detalleUsuario(id);
         let posteos= perfil.posteosDeCadaUsuario(id)
         return res.render('detalleUsuario', {usuario: resultado, posteos:posteos});

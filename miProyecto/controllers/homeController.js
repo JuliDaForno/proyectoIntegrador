@@ -1,4 +1,4 @@
-const db = require('../models')
+const db = require('../database/models')
 const posteo = db.Posteo;
 const usuario = db.Usuario;
 const comentario= db.Comentario
@@ -7,16 +7,18 @@ const op = db.Sequelize.Op;
 const homeController={
     index: function (req,res) {
         let relaciones = {
-            all:true,
-            nested:true
-        }
+            include:[
+                {
+                all:true,
+                nested:true,
+            }
+            ]
+
+        };
         posteo.findAll(relaciones)
         .then((result)=>{
             return res.render('index', {posteo: result})
-        });
-        usuario.findAll(relaciones)
-        .then((result)=>{
-            return res.render('index', {usuario: result})
+            //return res.send(result)
         })
         .catch((error)=>{
             return console.log(error)
@@ -36,13 +38,14 @@ const homeController={
                 }
             ]
         };
-        usuario.findByPk(id)
+        usuario.findByPk(id, relaciones)
         .then((result)=>{
             return res.render('resultadoBusqueda', {usuario:result})
         })
         .catch((err)=>{
             return res.redirect('/')
         });
-    } 
+    } ,
+
 }
 module.exports = homeController  

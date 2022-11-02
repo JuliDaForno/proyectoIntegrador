@@ -24,9 +24,6 @@ module.exports = function (sequelize, dataTypes) {
         updatedAt: {
             type: dataTypes.DATE,
             allowNull: true,
-        },  delete_at: {
-            type: dataTypes.DATE,
-            allowNull: true,
         }
     }
 
@@ -41,13 +38,11 @@ module.exports = function (sequelize, dataTypes) {
        Comentario.belongsTo(models.Posteo, {
              as : 'posteo',
              foreignKey : 'id_posteos',
-             onDelete:'cascade'
-         }),
+         })
          Comentario.belongsTo(models.Usuario, {
              as : 'usuario',
              foreignKey : 'id_usuarios',
              timestamps:false,
-             onDelete:'cascade'
          })
         }
     return Comentario;

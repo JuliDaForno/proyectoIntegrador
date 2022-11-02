@@ -5,7 +5,7 @@ const perfilController = require('../controllers/perfilController');
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-router.get('/register',perfilController.register)
+router.get('/register',perfilController.register) //create
 router.get('/perfil/:id', perfilController.detalleUsuario);
 router.get('/miPerfil/:id',perfilController.miPerfil )
 router.get('/login' , perfilController.login)

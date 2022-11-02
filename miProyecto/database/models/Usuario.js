@@ -38,10 +38,6 @@ module.exports = function (sequelize, dataTypes) {
         updatedAt: {
             type: dataTypes.DATE,
             allowNull: true,
-        },
-        deletedAt: {
-            type: dataTypes.DATE,
-            allowNull: true,
         }
     }
 
@@ -56,13 +52,11 @@ module.exports = function (sequelize, dataTypes) {
        Usuario.hasMany(models.Posteo, {
             as : 'posteo',
             foreignKey : 'id_usuarios',
-            onDelete:'cascade'
-        }),
+        })
         Usuario.hasMany(models.Comentario, {
             as : 'comentario',
             foreignKey : 'id_usuarios',
             timestamps: false,
-            onDelete: 'cascade'
         })
     }
     return Usuario;

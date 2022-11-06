@@ -1,7 +1,6 @@
 const db = require('../database/models')
 const posteo = db.Posteo;
 const usuario = db.Usuario;
-const comentario= db.Comentario
 const op = db.Sequelize.Op;
 
 const homeController={
@@ -17,8 +16,9 @@ const homeController={
         };
         posteo.findAll(relaciones)
         .then((result)=>{
-            return res.render('index', {posteo: result})
-            //return res.send(result)
+            //res.send(result)
+            return res.render('index', {posteos: result})
+            
         })
         .catch((error)=>{
             return console.log(error)

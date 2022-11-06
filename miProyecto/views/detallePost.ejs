@@ -14,11 +14,11 @@
         <div class="post-detail container">
             <section class="center main-content post">
                 <div class="info-usuario">
-                    <img class="fotoPerfil" src="<%=post.fotoPerfil%> " alt="">
+                    <img class="fotoPerfil" src="/images/<%=posteo.usuario.foto%> " alt="">
                     
-                    <p><a href="/users/perfil/<%=post.id_usuario%>"><%=post.nombre %></a></p>
+                    <p><a href="/users/perfil/<%=posteo.id_usuarios%>"><%=posteo.usuario.nombre %></a></p>
                 </div>
-                <img class="photo" src="<%=post.posteo %> " alt="" >
+                <img class="photo" src="/images/<%=posteo.image_name%>" alt="" >
             </section>
             <section class="right">
                 <h4>Comentarios</h4>
@@ -29,12 +29,12 @@
                     </form>
                     <div>
                         
-                        <% for( let i = 0; i < comentario.length; i++ ) { %>
+                        <% for( let i = 0; i < posteo.comentario.length; i++ ) { %>
                             <article class="comment">
-                                <img class="fotoPerfil"src="<%= comentario[i].fotoPerfil %> " alt="">
+                                <img class="fotoPerfil"src="/images/<%= posteo.comentario[i].usuario.foto %> " alt="">
                                 <section class="content">
-                                    <a class="user" href="/users/perfil/<%= comentario[i].id_usuario %> "><%=comentario[i].nombre %></a>
-                                    <span class="text"><%= comentario[i].comentario %> </span>
+                                    <a class="user" href="/users/perfil/<%= posteo.comentario[i].id_usuarios %> "><%=posteo.comentario[i].usuario.nombre %></a>
+                                    <span class="text"><%= posteo.comentario[i].texto_comentario %> </span>
                                 </section>
                             </article>
                         <% } %>

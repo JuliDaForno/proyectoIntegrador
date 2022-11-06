@@ -2,7 +2,7 @@ module.exports = function (sequelize, dataTypes) {
     let alias = 'Posteo';
 
     let cols = {
-        id: {
+        id:{
             autoIncrement: true,
             primaryKey: true,
             type: dataTypes.INTEGER

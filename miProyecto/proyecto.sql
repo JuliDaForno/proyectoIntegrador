@@ -54,7 +54,7 @@ FOREIGN KEY (id_seguidor) REFERENCES usuario(id)
 
 /*CREAR DATOS DE LA APP*/
 
-INSERT INTO usuario values (default, 'Zendaya', 'Coleman', 	'zendayac75','zendayac75@gmail.com', 	'1888','1998-08-02',	44232556, 'fotoPerfilZendaya.jpg', default, default);
+INSERT INTO usuario values (default, 'Zendaya', 'Coleman','zendayac75@gmail.com', 	'zendayac75', 	'1888','1998-08-02',	44232556, 'fotoPerfilZendaya.jpg', default, default);
 INSERT INTO usuario values (default, 'Noah', 	'Schnapp', 	'nchnapp', 	'nschnapp@gmail.com',	'2514','1999-10-05',	35676553, 'posteo2Noah.jpeg', default, default);
 INSERT INTO usuario values (default, 'Lady', 	'Gaga', 	'ladygaga56', 'ladygaga56@gmail.com',	'25689','1988-06-07',	33367114, 'ladygagaFotoperfil.jpg', default, default);
 INSERT INTO usuario values (default, 'Miley', 	'Cyrus', 	'mcyrus', 	'mcyrus@gmail.com',	'2875','1990-05-08',	34534555, 'mileyfotoPerfil.jpg', default, default);
@@ -83,4 +83,3 @@ INSERT INTO comentario values (default, 4, 8, 'Me gusta tu foto', default, defau
 INSERT INTO seguidores values (default, 1, 2, default, default);
 INSERT INTO seguidores values (default, 2, 1, default, default);
 INSERT INTO seguidores values (default, 1, 3, default, default);
-

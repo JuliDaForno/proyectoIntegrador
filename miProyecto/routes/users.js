@@ -10,6 +10,7 @@ router.get('/perfil/:id', perfilController.detalleUsuario);
 router.get('/miPerfil/:id',perfilController.miPerfil )
 router.get('/login' , perfilController.login)
 
+
 router.get('/editarPerfil/:id', perfilController.editarPerfil)
 
 

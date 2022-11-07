@@ -9,7 +9,7 @@
     <main>
         <section class="center main-content">
         <h1>Login</h1>
-        <form action="/users/miperfil" method="post">
+        <form action="/users/login" method="post">
             <div>
                 <label for="email"> Email</label>
                 <input type="email" name="email" id="" placeholder="Coloca tu mail">
@@ -17,6 +17,10 @@
             <div>
                 <label for="password"> Contraseña</label>
                 <input type="password" name="password">
+            </div>
+            <div>
+                <input id="recordarme" class="'recordame" type="checkbox" name="rememberme" >
+                <label class="recordarmeLabel" for="Recordarme">recordarme</label>
             </div>
             
             <button type="submit">Logueate</button>

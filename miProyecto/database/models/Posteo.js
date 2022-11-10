@@ -29,7 +29,7 @@ module.exports = function (sequelize, dataTypes) {
     let config ={
         tableName: "posteo",
         timestamps: false,
-        underscored: true,
+        underscored: false,
     }
 
     let Posteo = sequelize.define(alias,cols, config);

@@ -28,10 +28,10 @@ module.exports = function (sequelize, dataTypes) {
         numero_documento: {
             type: dataTypes.INTEGER
         },
-        foto: {
+        foto:{
             type: dataTypes.STRING
         },
-        createdAt: {
+        createdAT: {
             type: dataTypes.DATE,
             allowNull: true,
         },
@@ -44,7 +44,7 @@ module.exports = function (sequelize, dataTypes) {
     let config = {
         tableName: "usuario",
         timestamps: false,
-        underscored: true,
+        underscored: false,
     }
 
     let Usuario = sequelize.define(alias, cols, config);
@@ -59,14 +59,18 @@ module.exports = function (sequelize, dataTypes) {
             timestamps: false,
         })
         Usuario.belongsToMany(models.Usuario,{
-            as: 'id_seguidor',
+            as: 'mis_seguidores',
             through: 'seguidores',
-            foreignKey: 'id'
+            foreignKey: 'id_seguidor',
+            otherKey: 'id_seguido',
+
         })
         Usuario.belongsToMany(models.Usuario,{
-            as: 'id_seguido',
+            as: 'seguidos',
             through: 'seguidores',
-            foreignKey: 'id'
+            foreignKey: 'id_seguido',
+            otherKey: 'id_seguidor',
+
         })
 
     }

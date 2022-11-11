@@ -29,6 +29,10 @@ const perfilController = {
     register: (req, res) => {
         return res.render('registracion')
     },
+    store: (req,res)=>{
+        let usuarioAGuardar = req.body;
+        return res.redirect('/')
+    },
 
     store: (req,res)=>{
         let usuarioAGuardar = req.body;

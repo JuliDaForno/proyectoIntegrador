@@ -26,7 +26,7 @@ const perfilController = {
 
 
     },
-    register: (req, res) => {
+    create: (req, res) => {
         return res.render('registracion')
     },
     store: (req,res)=>{

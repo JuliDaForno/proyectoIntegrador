@@ -6,7 +6,13 @@ router.get('/', function(req, res, next) {
   });
 const postController= require('../controllers/postController');
 
-router.get('/agregar', postController.agregar)
+router.get('/agregar', postController.create);
+router.post('/agregar', postController.store);
 router.get('/detalle/:id', postController.detallePosteo);
+router.get('/search', postController.showOne);
+router.get('/editar/:id', postController.update);
+router.post('/editar', postController.editarPerfil);
+router.post('/delete/', postController.destroy);
+
 
 module.exports = router;

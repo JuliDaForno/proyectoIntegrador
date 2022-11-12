@@ -2,6 +2,9 @@ const db = require('../database/models');
 const usuario = db.Usuario
 const op = db.Sequelize.Op;
 const bycript=require('bcryptjs')
+
+
+
 const perfilController = {
     //Buscar por el id de usuario
     detalleUsuario: function (req, res) {
@@ -28,10 +31,6 @@ const perfilController = {
     },
     create: (req, res) => {
         return res.render('registracion')
-    },
-    store: (req,res)=>{
-        let usuarioAGuardar = req.body;
-        return res.redirect('/')
     },
 
     store: (req,res)=>{

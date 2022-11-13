@@ -36,15 +36,9 @@ const postController = {
             return res.render ('editar')
         })
     },
-    editarPerfil: (req,res) =>{
-    res.render('editarPerfil')
-    },
-    destroy: (req,res) =>{
-        res.send('hola')
-    },
-    showOne: (req,res) =>{
-        res.send('hola 2')
-    }
+showOne:(req, res) =>{},
+editarPerfil: (req, res) => {},
+destroy:(req, res) =>{},
     
 }
 module.exports = postController

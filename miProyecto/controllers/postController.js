@@ -36,9 +36,25 @@ const postController = {
             return res.render ('editar')
         })
     },
+    updatePost: (req, res) =>{
+   
+        let filtro = {
+            where: [{id: req.body.id}]
+        }
+        let info = req.body;
+
+        usuario.update (info, filtro)
+        if (req.session.user != undefined) {
+            //hacer la logica para que se agregue un 
+            return res.redirect('/')
+        } else {
+            return res.render('/users/login')
+        }
+    },
+
 showOne:(req, res) =>{},
 editarPerfil: (req, res) => {},
 destroy:(req, res) =>{},
     
 }
-module.exports = postController
+module.exports = postController;

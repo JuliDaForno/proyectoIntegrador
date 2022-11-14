@@ -184,21 +184,7 @@ let user ={
         })
         .catch(error)
 
-    },
-    updatePost: (req, res) =>{
-        let filtro = {
-            where: [{id: req.body.id}]
-        }
-        let info = req.body;
-
-        usuario.update (info, filtro)
-        .then((result)=>{
-            return res.redirect('/register')
-        })
-        .catch((err) => {
-            return res.redirect('/')
-    })
-}
+    }
 
 }
 module.exports = perfilController;

@@ -28,7 +28,7 @@ module.exports = function (sequelize, dataTypes) {
         numero_documento: {
             type: dataTypes.INTEGER
         },
-        foto: {
+        foto:{
             type: dataTypes.STRING
         },
         createdAT: {

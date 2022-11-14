@@ -9,7 +9,7 @@ nombre varchar (50) not null,
 apellido varchar(50) not null,
 email varchar (50) not null,
 usuario varchar (50) not null,
-contrasenia varchar (50) not null,
+contrasenia varchar (150) not null,
 fecha_nacimiento date not null,
 numero_documento INT UNSIGNED NOT NULL,
 foto varchar (100) not null,
@@ -60,16 +60,16 @@ INSERT INTO usuario values (default, 'Lady', 	'Gaga', 	'ladygaga56', 'ladygaga56
 INSERT INTO usuario values (default, 'Miley', 	'Cyrus', 	'mcyrus', 	'mcyrus@gmail.com',	'2875','1990-05-08',	34534555, 'mileyfotoPerfil.jpg', default, default);
 INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue', 	'ablue@gmail.com',	'4563','1988-05-05',	35674663, 'adeleFotoPerfil.jpg', default, default);
 
-INSERT INTO posteo values (default, 1 , 'posteoZendaya.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 2 , 'posteo1Noah.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 3 , 'ladygagaposteo1.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 4 , 'mileyposteo1.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 5 , 'adeleposteo1jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 1 , 'posteo2Zendaya.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 2 , 'poseteNoah.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 3 , 'ladygagaposteo2.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 4 , 'mileyposteo2.jpg', 'Hola', default, default);
-INSERT INTO posteo values (default, 5, 'adeleposteo2.jpg', 'Hola', default, default);
+INSERT INTO posteo values (default, 1 , 'posteoZendaya.jpg', 'Zendaya', default, default);
+INSERT INTO posteo values (default, 2 , 'posteo1Noah.jpg', 'Noah', default, default);
+INSERT INTO posteo values (default, 3 , 'ladygagaposteo1.jpg', 'LadyGaga', default, default);
+INSERT INTO posteo values (default, 4 , 'mileyposteo1.jpg', 'Miley', default, default);
+INSERT INTO posteo values (default, 5 , 'adeleposteo1jpg', 'Adele', default, default);
+INSERT INTO posteo values (default, 1 , 'posteo2Zendaya.jpg', 'Zendaya', default, default);
+INSERT INTO posteo values (default, 2 , 'poseteNoah.jpg', 'Noah', default, default);
+INSERT INTO posteo values (default, 3 , 'ladygagaposteo2.jpg', 'LadyGaga', default, default);
+INSERT INTO posteo values (default, 4 , 'mileyposteo2.jpg', 'Miley', default, default);
+INSERT INTO posteo values (default, 5, 'adeleposteo2.jpg', 'Adele', default, default);
 
 
 

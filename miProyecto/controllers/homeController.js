@@ -30,6 +30,7 @@ const homeController={
     },
     search: (req, res)=>{
         let id= req.params.id
+        let busqueda = req.query.busqueda
         let relaciones = {
             include:[
                 {
@@ -38,13 +39,24 @@ const homeController={
                 }
             ]
         };
-        usuario.findByPk(id, relaciones)
-        .then((result)=>{
-            return res.render('resultadoBusqueda', {usuario:result})
+        posteo.findAll({relaciones,
+        order: [['createdAt', 'DESC']],
+        limit: 10, where:{
+                
+                pie_post: {
+                    [op.like]: "%" + busqueda + "%"
+                }
+        }})
+        .then((postsBuscados) =>{
+            
+            if(postsBuscados.length <= 0){
+                res.locals.errorBuscador = 'No hay resultados para tu busqueda'
+                res.render('resultadoBusqueda')
+            }else{
+                console.log(postsBuscados[1].dataValues)
+                res.render('resultadoBusqueda', {posts: postsBuscados})
+            }
         })
-        .catch((err)=>{
-            return res.redirect('/')
-        });
     } ,
 
 }

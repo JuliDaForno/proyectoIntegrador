@@ -1,4 +1,5 @@
 const db = require('../database/models')
+const posteo = db.posteo
 const postController = {
     detallePosteo: function(req,res){
         let id = req.params.id
@@ -20,10 +21,24 @@ const postController = {
          
 
     },
-    agregar: function(req,res){
+    create: function(req,res){
         res.render('agregarPost')
     },
-    
+    store: (req,res)=>{
+        let postAGuardar = req.body;
+        return res.redirect('/');
+
+    },
+    update: (req, res) =>{
+        let id = req.params.id;
+        posteo.findByPk(id)
+        .then((result)=>{
+            return res.render ('editar')
+        })
+    },
+showOne:(req, res) =>{},
+editarPerfil: (req, res) => {},
+destroy:(req, res) =>{},
     
 }
 module.exports = postController

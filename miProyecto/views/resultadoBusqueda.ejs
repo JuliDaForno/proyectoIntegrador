@@ -12,6 +12,25 @@
         <article>     
             <Section>
                 <p>Tal vez te interesa:</p>
+                <%if(locals.errorBuscador){ %>
+                    <p><%=locals.errorBuscador %></p>
+                <% }else{ %>
+                    <% for(let i= 0; i < posts.length; i++){ %>
+                        <div class="post-body">
+                        <a href="/posts/detalle/<%=posts[i].dataValues.id %>">
+                            <img src="/images/<%= posts[i].dataValues.image_name%>" alt="">
+                        </a>
+                    </div>
+                    <ul class="post-reacciones">
+                        <li>
+                            <i class="fa-regular fa-heart"></i>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-comment"></i>
+                        </li>
+                    </ul>
+                    
+            <% }} %>
                 <ul class="search">
                     <li><a href="/users/perfil/5">Noah Schnapp</a></li>
                     <li><a href="/users/perfil/3">Zendaya</a></li>

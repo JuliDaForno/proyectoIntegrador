@@ -8,9 +8,9 @@
     <main>
         <section class="center main-content">
         <h1>Registrate!!</h1>
-        <form action="/users/login" method="post">
+        <form action="/users/login" method="POST">
 <% if (locals.errors) { %>
-    <%= locals.errors.message %> 
+    <p><%= errors.message %> </p>
 <% } %>
 <div>
     <label for="nombre"> Nombre</label>

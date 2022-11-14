@@ -3,6 +3,12 @@
         <div class="navbar-left">
             <h2 class="logo"><a href="/">Celebrity-Finder</a></h2>
         </div>
+        
+      <% if (locals.user != undefined) { %>
+        <a class="navbar-brand" href="#">Bienvenido, <%= locals.user.name  %> </a>
+       
+      <% } %>
+
         <div class="navbar-center">
             <form action="/search" class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>

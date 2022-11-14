@@ -1,5 +1,5 @@
 <% if (locals.user != undefined) { %>
-    <a class="navbar-brand" href="#">Bienvenido, <%= locals.user.name  %> </a>
+    <a class="navbar-brand" href="#">Bienvenido, <%= locals.user.nombre  %> </a>
    
     <a href="/usuario/<%= locals.user.id  %>">
       <img src="/images/usuarios/<%= locals.user.img  %>" alt="<%= locals.user.name  %>" style="width:50px">

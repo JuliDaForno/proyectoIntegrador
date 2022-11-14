@@ -24,10 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); // busca en la carpeta publics la ruta que nosotros insertamos
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/posts', postRouter);
-app.use('/logout', usersRouter )
+
 
 app.use(session({
   secret: "miProyecto",
@@ -61,6 +58,11 @@ app.use(function(req,res,next){
     return next();
   }
 });
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/posts', postRouter);
+app.use('/logout', usersRouter )
 
 
 // catch 404 and forward to error handler

@@ -94,14 +94,17 @@ if(usuario !=null){
     res.locals.errors=errors;
 return res.render('registracion');
 }
-let usuarioAGuardar = req.body;
+else{
+   let usuarioAGuardar = req.body;
 let user ={
     email: usuarioAGuardar.email,
     password: bcrypt.hashSync(usuarioAGuardar.password,10),
     img: usuarioAGuardar.fotoperfil,
     nacimiento: usuarioAGuardar.fecha,
     dni: usuarioAGuardar.dni
+} 
 }
+
     usuario.create(user)
         .then((result)=>{
             return res.redirect ('/users/login')
@@ -165,7 +168,12 @@ let user ={
         return res.render('editarPerfil', { usuario: perfil.usuarios, indice: req.params.id }) //para pasar un parametro lo pasamos como objeto literal
     },
     logout: (req,res)=>{
-        //destruir la session y cookie
+        req.session.destroy();
+        /* Destruir la cookie */
+        res.clearCookie('userId');
+
+        res.locals.user = undefined;
+
         return res.render('login');
     },
     update: (req, res) =>{

@@ -195,5 +195,6 @@ const perfilController = {
         .catch(error)
 
     }
+
 }
-module.exports = perfilController
+module.exports = perfilController;

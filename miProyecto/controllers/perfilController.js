@@ -1,7 +1,7 @@
 const db = require('../database/models');
 const usuario = db.Usuario
 const op = db.Sequelize.Op;
-const bycript=require('bcryptjs')
+const bcrypt=require('bcryptjs')
 
 
 
@@ -36,29 +36,30 @@ const perfilController = {
 
     //guardar el perfil
     store: (req,res)=>{
+
         let errors={};
-        if(req.body.nombre==""){
-            errors.message="El campo nombre esta vacio";
+       if(req.body.nombre== ""){ console.log('nombre');
+            errors.message="El campo nombre esta vacío";
             res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.apellido==""){
-            errors.message="El campo apellido esta vacio";
+            errors.message="El campo apellido esta vacío";
             res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.usuario==""){
-            errors.message="El campo apellido esta vacio";
+            errors.message="El campo usuario esta vacío";
             res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.email==""){
-            errors.message="El campo email esta vacio";
+            errors.message="El campo email esta vacío";
             res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.password==""){
-            errors.message="El campo password esta vacio";
+            errors.message="El campo password esta vacío";
             res.locals.errors=errors;
             return res.render('registracion');
         }
@@ -83,40 +84,49 @@ const perfilController = {
             return res.render('registracion');
         }
         else{
-            let condicion = {where:[{email: info.email}]}
-            db.Usuario.findOne(condicion)
-                // where:[{email: info.email},{usuario: info.usuario},{password:info.password}]
+            //pregunto si no existe
+            let condicion = {where:[{email: req.body.email}]}
+            console.log(req.file);
+            usuario.findOne(condicion)
+            .then((result)=>{
                 
+                if(result!=undefined){
+                    errors.message="El mail ya pertenece a un usuario existente";
+                    res.locals.errors=errors;
+                    return res.render('registracion');
+  
+                }else{
+                    
+                    let usuarioAGuardar = req.body;
+                    let user ={
+                        nombre:usuarioAGuardar.nombre,
+                        apellido: usuarioAGuardar.apellido,
+                        usuario:usuarioAGuardar.usuario,
+                        email: usuarioAGuardar.email,
+                        contrasenia: bcrypt.hashSync(usuarioAGuardar.password,10),
+                        foto: req.file.originalname,
+                        nacimiento: usuarioAGuardar.fecha,
+                        dni: usuarioAGuardar.dni
             
-            .then((usuario)=>{
-if(usuario !=null){
-    errors.message="El usuario o email ya existe";
-    res.locals.errors=errors;
-return res.render('registracion');
-}
-else{
-   let usuarioAGuardar = req.body;
-let user ={
-    email: usuarioAGuardar.email,
-    password: bcrypt.hashSync(usuarioAGuardar.password,10),
-    img: usuarioAGuardar.fotoperfil,
-    nacimiento: usuarioAGuardar.fecha,
-    dni: usuarioAGuardar.dni
-} 
-}
+                    }
+                    usuario.create(user)
+                .then((result)=>{
+                    return res.redirect ('/users/login')
+        
+                })
+                .catch((err)=>{
+                    console.log(err)
+                })   
+                }
 
-    usuario.create(user)
-        .then((result)=>{
-            return res.redirect ('/users/login')
-        })
-        .catch((err)=>{
-            return console.log(err)
-        })
+            })
+            .catch((error)=>{
+               console.log(error);
+            })
+    }
+},
+        
 
-    })
-}
-// let usuarioAGuardar = req.body;
-        },
     login: function (req, res) {
         if (req.session.user!= undefined) {
             return res.redirect('/')
@@ -158,7 +168,7 @@ let user ={
             console.log(error);
         })
     },
-    miPerfil: function (req, res) {
+    miPerfil: function(req, res) {
         let id = req.params.id
         let usuario = perfil.detalleUsuario(id)
         let resultado = perfil.misPosteos(id)

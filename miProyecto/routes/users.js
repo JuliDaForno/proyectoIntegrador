@@ -27,6 +27,7 @@ router.get('/miPerfil/:id',perfilController.miPerfil )
 router.get('/login' , perfilController.login)
 router.post('/login', perfilController.loginUsuario)
 router.get('/editarPerfil/:id', perfilController.editarPerfil)
+router.post('/editarPerfil/:id', perfilController.update)
 router.get('/logout', perfilController.logout)
 
 

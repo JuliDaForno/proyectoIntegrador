@@ -44,7 +44,7 @@ const homeController={
         limit: 10, where:{
                 
                 pie_post: {
-                    [op.like]: `%${busqueda}%`
+                    [op.like]: "%" + busqueda + "%"
                 }
         }})
         .then((postsBuscados) =>{

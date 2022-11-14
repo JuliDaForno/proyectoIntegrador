@@ -29,63 +29,65 @@ const perfilController = {
 
 
     },
+    //mostrar el formulario de usuario
     create: (req, res) => {
         return res.render('registracion')
     },
 
+    //guardar el perfil
     store: (req,res)=>{
         let errors={};
         if(req.body.nombre==""){
             errors.message="El campo nombre esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.apellido==""){
             errors.message="El campo apellido esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.usuario==""){
             errors.message="El campo apellido esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.email==""){
             errors.message="El campo email esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.password==""){
             errors.message="El campo password esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
-        else if (req.body.password.length <= 2){
+        else if (req.body.password.length <= 3){
             errors.message="El campo password debe ser de 3 o mas caracteres";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.file== undefined){
             errors.message="El campo foto perfil esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.fecha==""){
             errors.message="El campo fecha esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else if (req.body.dni==""){
             errors.message="El campo dni esta vacio";
-            res.locals.erros=errors;
+            res.locals.errors=errors;
             return res.render('registracion');
         }
         else{
-            db.Usuario.findOne({
-                where:{
-                [op.or]:[{emial:req.body.email}, {usuario: req.body.usuario}]
-                }
-            })
+            let condicion = {where:[{email: info.email}]}
+            db.Usuario.findOne(condicion)
+                // where:[{email: info.email},{usuario: info.usuario},{password:info.password}]
+                
+            
             .then((usuario)=>{
 if(usuario !=null){
     errors.message="El usuario o email ya existe";
@@ -100,7 +102,7 @@ let user ={
     nacimiento: usuarioAGuardar.fecha,
     dni: usuarioAGuardar.dni
 }
-db.Usuario.create(user)
+    usuario.create(user)
         .then((result)=>{
             return res.redirect ('/users/login')
         })
@@ -113,7 +115,11 @@ db.Usuario.create(user)
 // let usuarioAGuardar = req.body;
         },
     login: function (req, res) {
-        return res.render('login')
+        if (req.session.user!= undefined) {
+            return res.redirect('/')
+        } else {
+            return res.render('login')
+        }
     },
     loginUsuario: function(req,res){
         let errors={};
@@ -121,13 +127,13 @@ db.Usuario.create(user)
         let filtro ={
             where:[{email: info.email}]
         }
-      db.Usuario.findOne(filtro)
+      usuario.findOne(filtro)
         .then((result)=>{
             if(result != null){
+                console.log(result)
                 let passEncriptada = bycript.compareSync(info.password, result.contrasenia);
                 if(passEncriptada){
-             req.session.user = result.dataValues;
-                    
+                    req.session.user = result.dataValues;
                     if(info.rememberme != undefined){
                         res.cookie('usuarioId', result.dataValues.id, {maxAge: 1000 * 60 * 10});
                     }
@@ -140,7 +146,7 @@ db.Usuario.create(user)
                 }
             }
           else{
-            errors.message= "El email es invalido";
+            errors.message= "El email o contraseña es invalido";
             res.locals.errors=errors;
             return res.render('login');
           }
@@ -161,6 +167,15 @@ db.Usuario.create(user)
     logout: (req,res)=>{
         //destruir la session y cookie
         return res.render('login');
+    },
+    update: (req, res) =>{
+        let id = req.params.id;
+        usuario.findByPk(id)
+        .then((result)=>{
+            return res.render('editarPerfil', {usuario: result.dataValues})
+        })
+        .catch(error)
+
     }
 }
 module.exports = perfilController

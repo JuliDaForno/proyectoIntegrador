@@ -170,10 +170,23 @@ const perfilController = {
         })
     },
     miPerfil: function(req, res) {
-        let id = req.params.id
-        let usuario = perfil.detalleUsuario(id)
-        let resultado = perfil.misPosteos(id)
-        return res.render('miPerfil', { usuario: usuario, posteos: resultado })
+        let id = req.params.id;
+        let relaciones = {
+            include: [
+                {
+                    all: true,
+                    nested: true
+                }
+            ]
+        };
+        usuario.findByPk(id, relaciones)
+            .then((result) => {
+                //res.send(result)
+                return res.render('miPerfil', { usuario: result })
+            })
+            .catch((err) => {
+                return res.redirect('/')
+            })
     },
     editarPerfil: function (req, res) {
         return res.render('editarPerfil', { usuario: perfil.usuarios, indice: req.params.id }) //para pasar un parametro lo pasamos como objeto literal

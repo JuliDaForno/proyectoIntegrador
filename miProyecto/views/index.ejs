@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <% if (locals.user != undefined) { %>
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>
+        <%- include('./partials/header') %>
+    <% } %>
+ 
     <%- include('./partials/head') %>
 
 <body>
-    <%- include('./partials/header') %>
+
 
     <main>
         <section class="center main-content">

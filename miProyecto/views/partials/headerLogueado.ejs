@@ -1,33 +1,32 @@
+<header class="main-header">
+  <nav class="main-nav">
+      <div class="navbar-left">
+          <h2 class="logo"><a href="/">Celebrity-Finder</a></h2>
+      </div>
+  
 <% if (locals.user != undefined) { %>
-    <a class="navbar-brand" href="#">Bienvenido, <%= locals.user.nombre  %> </a>
-   
-    <a href="/usuario/<%= locals.user.id  %>">
-      <img src="/images/usuarios/<%= locals.user.img  %>" alt="<%= locals.user.name  %>" style="width:50px">
-    </a>
-  <% } %>
-
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/movies">Home</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/movies/register">Registrar Pelicula</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/users/logout">Logout</a>
-      </li>
-      
-    </ul>
-    <form class="d-flex" action="/movies/busqueda" method="get">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="pelicula">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
+  <a class="navbar-brand" href="#">Bienvenido, <%= locals.user.usuario  %> </a>
+ 
+  <a href="/usuario/<%= locals.user.id  %>">
+    <img src="/images/users/<%= locals.user.foto  %>" alt="<%= locals.user.nombre  %>" style="width:50px">
+  </a>
+<% } %>
+<div class="navbar-center">
+  <form action="/search" class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" class="search-input" name="busqueda" placeholder="Buscar...">
+      <button type="submit">Buscar</button>
+  </form>
+</div>
+<div class="navbar-right">
+  <ul class="menu">
+      <li><a href="/users/register">Registro</a></li>
+      <li><a href="/users/login">Login</a></li>
+      <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="/posts/agregar"><i class="fa-regular fa-square-plus"></i></a></li>
+      <li><a href="/users/miPerfil/3"><i class="fa-regular fa-user"></i></a></li>
+      <li><a href="/users/logout" ><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+  </ul>
 </div>
 </nav>
+</header>

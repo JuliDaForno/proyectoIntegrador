@@ -104,7 +104,7 @@ const perfilController = {
                         usuario:usuarioAGuardar.usuario,
                         email: usuarioAGuardar.email,
                         contrasenia: bcrypt.hashSync(usuarioAGuardar.password,10),
-                        foto: req.file.originalname,
+                        foto: req.file.filename,
                         nacimiento: usuarioAGuardar.fecha,
                         dni: usuarioAGuardar.dni
             
@@ -144,9 +144,10 @@ const perfilController = {
         .then((result)=>{
             if(result != null){
                 console.log(result)
-                let passEncriptada = bycript.compareSync(info.password, result.contrasenia);
+                let passEncriptada = bcrypt.compareSync(info.password, result.contrasenia);
                 if(passEncriptada){
                     req.session.user = result.dataValues;
+
                     if(info.rememberme != undefined){
                         res.cookie('usuarioId', result.dataValues.id, {maxAge: 1000 * 60 * 10});
                     }

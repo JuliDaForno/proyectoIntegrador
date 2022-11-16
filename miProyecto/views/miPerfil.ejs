@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head') %>
+    <% if (locals.user != undefined) { %>
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>
+        <%- include('./partials/header') %>
+    <% } %>
 
 <body>
-    <%- include('./partials/header') %>
+    <%- include('./partials/head') %>
 
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="<%=usuario.fotoPerfil%>" alt="">
+                <img class="profile" src="/images/<%=usuario.foto%>" alt="">
                 <div class="info-usuario">
-                    <p><%= usuario.nombre %></p> 
-                    <a class="follow" href="/users/editarPerfil/0"><i class="fa-solid fa-user-gear"></i></a>
+
+                    <p><%= usuario.nombre %> </p> 
+                    <a class="follow" href="">seguir</a>
                     <ul class="meta">
-                        <li>publicaciones: <%=usuario.publicaciones%></li>
-                        <li>seguidores: <%=usuario.seguidores%></li>
-                        <li>seguidos: <%=usuario.seguidos%></li>
+                        <li> publicaciones: <%= usuario.posteo.length %> </li>
+                        <li> seguidores: <%= usuario.mis_seguidores %></li>
+                        <li> seguidos: <%= usuario.seguidos %></li>
                     </ul>
                 </div>
             </section>
             <section class="bottom">
-                <% for(let i = 0; i < posteos.length; i++){ %>
-                <article class="post">
-                    <a href="/posts/detalle/<%= posteos[i].id %> ">
-                        <img src="<%=posteos[i].posteo %>" alt="">
-                    </a>
-                </article>
-                <%} %>
-                
-               
+                    <% for( let i = 0; i < usuario.posteo.length; i++ ) { %>
+                    <article class="post">
+                        <a href="/posts/detalle/<%=usuario.posteo[i].id %> ">
+                            <img src="/images/<%=usuario.posteo[i].image_name%>" alt="">
+                        </a>
+                    </article>
+                    <% } %>         
             </section>
         </div>
     </main>
 
     <%- include('./partials/footer') %> 
-
+    
 </body>
 
 </html>

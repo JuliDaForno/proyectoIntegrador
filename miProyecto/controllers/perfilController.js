@@ -194,7 +194,7 @@ const perfilController = {
     logout: (req,res)=>{
         req.session.destroy();
         /* Destruir la cookie */
-        res.clearCookie('userId');
+        res.clearCookie('usuarioId');
 
         res.locals.user = undefined;
 

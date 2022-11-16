@@ -3,12 +3,13 @@
 
     <%- include('./partials/head') %>
 
+    <% if (locals.user != undefined) { %>
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>
+        <%- include('./partials/header') %>
+    <% } %>
+
 <body>
-    <%- include('./partials/header') %>
-
-
-<body>
-
 
     <main>
         <div class="post-detail container">

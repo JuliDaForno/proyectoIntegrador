@@ -152,15 +152,16 @@ const userController = {
                         res.cookie('usuarioId', result.dataValues.id, {maxAge: 1000 * 60 * 10});
                     }
                     return res.redirect('/');
-                   
+                
                 }else{
                     errors.message= "La contraseña no coincide";
                     res.locals.errors=errors;
                     return res.render('login');
                 }
+
             }
           else{
-            errors.message= "El email o contraseña es invalido";
+            errors.message= "El email ingresado no existe";
             res.locals.errors=errors;
             return res.render('login');
           }

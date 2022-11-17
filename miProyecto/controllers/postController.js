@@ -30,11 +30,17 @@ const postController = {
 
     },
     update: (req, res) =>{
+    if (!req.session.user) {
+        throw Error('no estas autorizado a editar el posteo') //validaciones, si o se encuentra el usuario, no te deja editar
+    }
+
         let id = req.params.id;
         posteo.findByPk(id)
         .then((result)=>{
             return res.render ('editar')
         })
+
+       
     },
     updatePost: (req, res) =>{
    

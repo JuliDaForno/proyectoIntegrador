@@ -40,7 +40,7 @@ const homeController={
             ]
         };
         posteo.findAll({relaciones,
-        order: [['createdAt', 'DESC']],
+        order: [['createdAt', 'ASC']],
         limit: 10, where:{
                 
                 pie_post: {

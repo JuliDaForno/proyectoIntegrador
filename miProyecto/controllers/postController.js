@@ -4,7 +4,7 @@ const postController = {
     detallePosteo: function(req,res){
         let id = req.params.id
         let relaciones = {
-            include:[
+            include:[              
                 {
                 all:true,
                 nested:true,
@@ -14,12 +14,7 @@ const postController = {
         db.Posteo.findByPk(id,relaciones)
         .then((posteo)=>{
             return res.render('detallePost', {posteo: posteo })
-            res.send(posteo)
         })
-        // let post= perfil.detallePosteo(id);
-        // let comentarios = perfil.comentario
-         
-
     },
     create: function(req,res){
         res.render('agregarPost')

@@ -34,17 +34,34 @@ const postController = {
             return res.render ('editar')
         })
 
-        let info = req.body; //guardamos los datos
-        let imagen = req.file.filename;
-        
-        let posteoNuevo = {
-            usuario: info.usuario,
-            post: imagen,
-            imagen: info.post,
-            usuario_id: req.session.user.id
-        } 
-        Posteo.update( posteoNuevo,{where: {id: req.params.id}})
-        .then((resultado) => {res.redirect("/")})    
+        //empiezo a trabajar con agregarPost
+
+        let datosUsuario = req.body
+    
+            let errors = {}
+            console.log(datosUsuario);
+            if(req.body.usuario == ""){
+                errors.message = "el usuario esta vacio"
+                res.locals.errors = errors
+                return res.render('index', {usuario_id: req.params.id})
+            }else if(req.body.imagen == ""){
+                errors.message = "debes subir una imagen"
+                res.locals.errors = errors
+                return res.render('index', {usuario_id: req.params.id})
+            }else if(req.body.post == ""){
+                errors.message = "el post esta vacio"
+                res.locals.errors = errors
+                return res.render('index', {usuario_id: req.params.id})
+            }
+            else{
+                let nuevosDatos = {
+                    id_usuarios: req.body.usuario,
+                    image_name: req.file.filename,
+                    pie_post: req.body.post
+                }
+                Posteo.update( nuevosDatos,{where: {id: req.params.id}})
+                .then((resultado) => {res.redirect("/")})
+            } 
     },
 
 showOne:(req, res) =>{},

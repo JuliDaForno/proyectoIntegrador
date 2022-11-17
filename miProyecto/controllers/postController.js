@@ -1,4 +1,6 @@
+const { production } = require('../database/config/config')
 const db = require('../database/models')
+const { post } = require('../routes/users')
 const posteo = db.posteo
 const postController = {
     detallePosteo: function(req,res){
@@ -25,32 +27,24 @@ const postController = {
 
     },
     update: (req, res) =>{
-    if (!req.session.user) {
-        throw Error('no estas autorizado a editar el posteo') //validaciones, si o se encuentra el usuario, no te deja editar
-    }
-
         let id = req.params.id;
+
         posteo.findByPk(id)
         .then((result)=>{
             return res.render ('editar')
         })
 
-       
-    },
-    updatePost: (req, res) =>{
-   
-        let filtro = {
-            where: [{id: req.body.id}]
-        }
-        let info = req.body;
-
-        usuario.update (info, filtro)
-        if (req.session.user != undefined) {
-            //hacer la logica para que se agregue un 
-            return res.redirect('/')
-        } else {
-            return res.render('/users/login')
-        }
+        let info = req.body; //guardamos los datos
+        let imagen = req.file.filename;
+        
+        let posteoNuevo = {
+            usuario: info.usuario,
+            post: imagen,
+            imagen: info.post,
+            usuario_id: req.session.user.id
+        } 
+        Posteo.update( posteoNuevo,{where: {id: req.params.id}})
+        .then((resultado) => {res.redirect("/")})    
     },
 
 showOne:(req, res) =>{},

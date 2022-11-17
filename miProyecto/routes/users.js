@@ -29,6 +29,7 @@ router.post('/login', userController.loginUsuario)
 
 
 router.get('/editarPerfil/:id', userController.editarPerfil)
+router.post('/update/:id', upload.single('foto'), userController.update)
 
 router.get('/logout', userController.logout)
 

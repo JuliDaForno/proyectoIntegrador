@@ -5,7 +5,7 @@ const bcrypt=require('bcryptjs')
 
 
 
-const perfilController = {
+const userController = {
     //Buscar por el id de usuario
     detalleUsuario: function (req, res) {
         let id = req.params.id;
@@ -105,8 +105,8 @@ const perfilController = {
                         email: usuarioAGuardar.email,
                         contrasenia: bcrypt.hashSync(usuarioAGuardar.password,10),
                         foto: req.file.filename,
-                        nacimiento: usuarioAGuardar.fecha,
-                        dni: usuarioAGuardar.dni
+                        fecha_nacimiento: usuarioAGuardar.fecha,
+                        numero_documento: usuarioAGuardar.dni
             
                     }
                     usuario.create(user)
@@ -211,4 +211,4 @@ const perfilController = {
     }
 
 }
-module.exports = perfilController;
+module.exports = userController;

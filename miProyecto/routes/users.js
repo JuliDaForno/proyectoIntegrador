@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const perfilController = require('../controllers/perfilController');
+const userController = require('../controllers/userController');
 
 let multer = require('multer');
 let path = require('path');
@@ -20,17 +20,17 @@ let upload = multer({storage: storage})
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-router.get('/register',perfilController.create) //create
-router.post('/register', upload.single('fotoperfil'), perfilController.store)
-router.get('/perfil/:id', perfilController.detalleUsuario);
-router.get('/miPerfil/:id',perfilController.miPerfil )
-router.get('/login' , perfilController.login)
-router.post('/login', perfilController.loginUsuario)
+router.get('/register',userController.create) //create
+router.post('/register', upload.single('fotoperfil'), userController.store)
+router.get('/perfil/:id', userController.detalleUsuario);
+router.get('/miPerfil/:id',userController.miPerfil )
+router.get('/login' , userController.login)
+router.post('/login', userController.loginUsuario)
 
 
-router.get('/editarPerfil/:id', perfilController.editarPerfil)
+router.get('/editarPerfil/:id', userController.editarPerfil)
 
-router.get('/logout', perfilController.logout)
+router.get('/logout', userController.logout)
 
 
 // multer para el router.post de editar perfil : upload.single('foto')

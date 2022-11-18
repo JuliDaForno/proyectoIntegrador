@@ -22,29 +22,33 @@ const postController = {
         res.render('agregarPost')
     },
     store: (req,res)=>{
-        let postAGuardar = req.body;
-        return res.redirect('/');
+        if (!req.session.user) {
+            return res.render('agregarPost', {error: 'No estas autorizado'})
+        }
+        req.body.id_usuarios = req.session.user.id
 
-    },
-    update: (req, res) =>{
-        let id = req.params.id;
-
-        posteo.findByPk(id)
-        .then((result)=>{
-            return res.render ('editar')
+        if (req.file) req.body.image_name = (req.file.path).replace('public', '');
+        db.Posteo.create({
+            id_usuarios: req.session.user.id, 
+            image_name: req.body.imagen,
+            pie_post: req.body.post
         })
+        .then(function(){
+            res.redirect('/')
+        })
+        .catch(function (error) {
+            req.send(error);
+        })
+       /* let postAGuardar = req.body;
+        return res.redirect('/');*/
 
         //empiezo a trabajar con agregarPost
 
-        let datosUsuario = req.body
+        /* let datosUsuario = req.body
     
             let errors = {}
             console.log(datosUsuario);
-            if(req.body.usuario == ""){
-                errors.message = "el usuario esta vacio"
-                res.locals.errors = errors
-                return res.render('index', {usuario_id: req.params.id})
-            }else if(req.body.imagen == ""){
+            if(req.body.imagen == ""){
                 errors.message = "debes subir una imagen"
                 res.locals.errors = errors
                 return res.render('index', {usuario_id: req.params.id})
@@ -55,13 +59,22 @@ const postController = {
             }
             else{
                 let nuevosDatos = {
-                    id_usuarios: req.body.usuario,
                     image_name: req.file.filename,
                     pie_post: req.body.post
                 }
-                Posteo.update( nuevosDatos,{where: {id: req.params.id}})
-                .then((resultado) => {res.redirect("/")})
-            } 
+            if(req.file) req.body.image_name = (req.file.path).replace(`public`, ``) //lo que viene por la ruta que te lo meta adentro de public 
+
+            Posteo.create( nuevosDatos,{where: {id: req.params.id}})
+            .then((resultado) => {res.redirect("/")})
+            } */
+    },
+    update: (req, res) =>{
+        let id = req.params.id;
+
+        posteo.findByPk(id)
+        .then((result)=>{
+            return res.render ('editar')
+        })
     },
 
 showOne:(req, res) =>{},

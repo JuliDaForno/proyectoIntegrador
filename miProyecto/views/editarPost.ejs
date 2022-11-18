@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+<body>
+    <% if (locals.user != undefined) { %>
+        <%- include('./partials/headerLogueado') %>
+    <% } else { %>
+        <%- include('./partials/header') %>
+    <% } %>
+
+
+    <main>
+        <section class="center main-content">
+        <h1>Editar Post</h1>
+        <form action="/users/login" method="post" encrtype="multipart/from-data">
+            <div>
+                <label for="imagen"> Imagen </label>
+                <input type="file" name="imagen"  placeholder="Editar posteo">
+            </div>
+            <div>
+                <label for="post"> Texto</label>
+                <input type="text" name="post"  placeholder="Escribe un texto para el posteo">
+            </div>
+            
+            <button type="submit">Editar</button>
+            
+                    </form>
+        </section>
+    </main>
+
+    <%- include('./partials/footer') %> 
+
+</body>
+
+</html>

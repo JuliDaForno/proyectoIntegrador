@@ -10,12 +10,12 @@ module.exports = function (sequelize, dataTypes) {
         id_usuarios: {
             type: dataTypes.INTEGER
         },  
-       image_name:{
-        type: dataTypes.STRING
-       },
-       pie_post:{
-        type: dataTypes.STRING
-       },
+        image_name:{
+            type: dataTypes.STRING
+        },
+        pie_post:{
+            type: dataTypes.STRING
+        },
         createdAt: {
             type: dataTypes.DATE,
             allowNull: true,

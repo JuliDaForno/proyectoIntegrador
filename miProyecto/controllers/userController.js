@@ -190,7 +190,13 @@ const userController = {
             })
     },
     editarPerfil: function (req, res) {
-        return res.render('editarPerfil', { usuario: perfil.usuarios, indice: req.params.id }) //para pasar un parametro lo pasamos como objeto literal
+        let id = req.params.id;
+        res.locals.id = id 
+        usuario.findByPk(id)
+        .then((result)=>{
+            return res.render('editarPerfil', {usuario: result.dataValues, usuario_id: id})
+        })
+        .catch(error => console.log(error))//para pasar un parametro lo pasamos como objeto literal
     },
     logout: (req,res)=>{
         req.session.destroy();
@@ -202,12 +208,58 @@ const userController = {
         return res.render('login');
     },
     update: (req, res) =>{
-        let id = req.params.id;
-        usuario.findByPk(id)
-        .then((result)=>{
-            return res.render('editarPerfil', {usuario: result.dataValues})
-        })
-        .catch(error)
+        let id = req.params.id
+        let datosUsuario = req.body
+
+        let errors = {}
+        console.log(datosUsuario);
+        if(req.body.email.length == ""){
+            errors.message = "el email esta vacio"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }else if(req.body.username == ""){
+            errors.message = "el usuario esta vacio"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }else if(req.body.password == ""){
+            errors.message = "la contraseña esta vacia"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }else if(req.body.foto == ""){
+            errors.message = "debes subir una imagen"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }else if(req.body.fecha == ""){
+            errors.message = "la fecha esta vacia"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }else if(req.body.dni.length == ""){
+            errors.message = "el dni es invalido"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }else if(req.body.apellido == ""){
+            errors.message = "el apellido esta vacio"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }else if(req.body.nombre == ""){
+            errors.message = "el nombre esta vacio"
+            res.locals.errors = errors
+            return res.render('editarPerfil', {usuario_id: req.params.id})
+        }
+        else{
+            let nuevosDatos = {
+                email: req.body.email,
+                contrasenia: bcrypt.hashSync(req.body.password,10),
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                numero_documento: req.body.dni,
+                usuario: req.body.username,
+                fecha_nacimiento: req.body.fecha,
+                foto: req.file.filename
+            }
+            usuario.update( nuevosDatos,{where: {id: req.params.id}})
+            .then((resultado) => {res.redirect(`/users/perfil/${req.params.id}`)})
+        }
 
     }
 

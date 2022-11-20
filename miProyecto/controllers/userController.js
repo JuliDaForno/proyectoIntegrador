@@ -180,9 +180,9 @@ const userController = {
                 }
             ]
         };
-        usuario.findByPk(id, relaciones)
+        usuario.findByPk({id, relaciones, 
+            order: [['createdAt', 'DESC']]})
             .then((result) => {
-                //res.send(result)
                 return res.render('miPerfil', { usuario: result })
             })
             .catch((err) => {

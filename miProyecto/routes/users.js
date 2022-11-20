@@ -7,7 +7,7 @@ let path = require('path');
 
 let storage = multer.diskStorage({
     destination: function( req, res, cb){
-        cb(null, path.join(__dirname, '../public/images/users'))
+        cb(null,  'public/images/users')
     },
     filename: function(req, file, cb){
         cb(null, file.fieldname +  '-' + Date.now() + path.extname(file.originalname))
@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 router.get('/register',userController.create) //create
-router.post('/register', upload.single('fotoperfil'), userController.store)
+router.post('/register', upload.single('fotoDePerfil'), userController.store)
 router.get('/perfil/:id', userController.detalleUsuario);
 router.get('/miPerfil/:id',userController.miPerfil )
 router.get('/login' , userController.login)

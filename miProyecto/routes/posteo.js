@@ -27,7 +27,7 @@ router.post('/agregar', upload.single('imagen'),  postController.store);
 router.get('/detalle/:id', postController.detallePosteo);
 router.get('/search', postController.showOne);
 
-router.post('/editar/:id', postController.editarPost);
+//router.post('/editar/:id', postController.editarPost);
 router.get('/editar/:id', postController.update);
 
 router.post('/editar', postController.editarPerfil);

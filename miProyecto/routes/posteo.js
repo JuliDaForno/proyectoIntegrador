@@ -33,6 +33,7 @@ router.get('/editar/:id', postController.update);
 router.post('/editar', postController.editarPerfil);
 router.post('/delete/', postController.destroy);
 
+router.post('/addComment', postController.comment);
 
 
 

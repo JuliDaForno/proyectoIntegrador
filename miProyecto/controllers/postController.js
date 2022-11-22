@@ -15,6 +15,7 @@ const postController = {
 
         db.Posteo.findByPk(id,relaciones)
         .then((posteo)=>{
+            req.session.posteo_id = req.params.id
             return res.render('detallePost', {posteo: posteo })
         })
     },
@@ -80,6 +81,15 @@ const postController = {
 showOne:(req, res) =>{},
 editarPerfil: (req, res) => {},
 destroy:(req, res) =>{},
+comment: (req, res) =>{
+    db.Comentario.create({
+      id_usuarios: req.session.user.id,
+      id_posteos: req.session.posteo_id,
+      texto_comentario: req.body.comentario
+    }).then((result) =>{
+      res.redirect('/posts/detalle/' + req.session.posteo_id)
+    })
+},
     
 }
 module.exports = postController;

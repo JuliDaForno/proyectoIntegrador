@@ -65,7 +65,6 @@ const postController = {
                     pie_post: req.body.post
                 }
             if(req.file) req.body.image_name = (req.file.path).replace(`public`, ``) //lo que viene por la ruta que te lo meta adentro de public 
-
             Posteo.create( nuevosDatos,{where: {id: req.params.id}})
             .then((resultado) => {res.redirect("/")})
             } */

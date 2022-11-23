@@ -180,9 +180,9 @@ console.log(req.body);
                 }
             ]
         };
-        usuario.findByPk({id, relaciones, 
-            order: [['createdAt', 'DESC']]})
+        usuario.findByPk(id, relaciones)
             .then((result) => {
+                //res.send(result)
                 return res.render('miPerfil', { usuario: result })
             })
             .catch((err) => {

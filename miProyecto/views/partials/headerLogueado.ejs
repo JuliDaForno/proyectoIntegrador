@@ -6,7 +6,7 @@
   <a class="navbar-brand" href="#">Bienvenido, <%= locals.user.usuario  %> </a>
  
   <a href="/users/miPerfil/<%= locals.user.id  %>">
-    <img src="<%=locals.user.foto %>" alt="<%= locals.user.nombre %> " style="width:50px">
+    <img src="/images/users/<%= locals.user.foto  %>" alt="<%= locals.user.nombre %> " style="width:50px">
   </a>
 
 <div class="navbar-center">

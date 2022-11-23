@@ -64,7 +64,7 @@ INSERT INTO posteo values (default, 1 , 'posteoZendaya.jpg', 'Zendaya', default,
 INSERT INTO posteo values (default, 2 , 'posteo1Noah.jpg', 'Noah', default, default);
 INSERT INTO posteo values (default, 3 , 'ladygagaposteo1.jpg', 'LadyGaga', default, default);
 INSERT INTO posteo values (default, 4 , 'mileyposteo1.jpg', 'Miley', default, default);
-INSERT INTO posteo values (default, 5 , 'adeleposteo1jpg', 'Adele', default, default);
+INSERT INTO posteo values (default, 5 , 'adeleposteo1.jpg', 'Adele', default, default);
 INSERT INTO posteo values (default, 1 , 'posteo2Zendaya.jpg', 'Zendaya', default, default);
 INSERT INTO posteo values (default, 2 , 'poseteNoah.jpg', 'Noah', default, default);
 INSERT INTO posteo values (default, 3 , 'ladygagaposteo2.jpg', 'LadyGaga', default, default);

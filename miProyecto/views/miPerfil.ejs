@@ -14,11 +14,11 @@
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class = 'profile' src="/images/users/<%=locals.foto %>" alt="" style="width:150px">
+                <img class = 'profile' src="<%=locals.foto %>" alt="" style="width:150px">
                 <div class="info-usuario">
 
                     <p><%= usuario.nombre %> </p> 
-                    <a class="follow" href="">seguir</a>
+                    <a class="follow" href="/users/editarPerfil/<%=locals.idusuario %>">Editar Perfil</a>
                     <ul class="meta">
                         <li> publicaciones: <%= usuario.posteo.length %> </li>
                         <li> seguidores: <%= usuario.mis_seguidores %></li>

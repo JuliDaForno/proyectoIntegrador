@@ -1,5 +1,5 @@
 const db = require('../database/models')
-const posteo = db.Posteo;
+const posteo = db.Posteo; // recibo el Obj.Literal, hago el llamado a su alias
 const usuario = db.Usuario;
 const op = db.Sequelize.Op;
 

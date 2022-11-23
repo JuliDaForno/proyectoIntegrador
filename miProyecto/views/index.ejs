@@ -19,10 +19,10 @@
                 
                 <% if (posteos[i].usuario.id == locals.idusuario) { %>
                     <p class="">
-                        <a href="/posts/editar/<%=posteos[i].id %>">Editar producto</a>
+                        <a href="/posts/editar/<%=posteos[i].id %>">Editar posteo</a>
                     </p> 
                     <p class="">
-                        <a href="/posts/delete/<%=posteos[i].id %>">Eliminar producto</a>
+                        <a href="/posts/delete/<%=posteos[i].id %>">Eliminar posteo</a>
                     </p> 
                 <% } %>
                 
@@ -34,7 +34,7 @@
                     </div>
                     <div class="post-body">
                         <a href="/posts/detalle/<%=posteos[i].id %>">
-                            <img src="<%= posteos[i].image_name%>" alt="">
+                            <img src="<%=posteos[i].image_name%>" alt="">
                         </a>
                     </div>
                     <ul class="post-reacciones">

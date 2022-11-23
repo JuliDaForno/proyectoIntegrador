@@ -49,16 +49,16 @@ INSERT INTO usuario values (default, 'Lady', 	'Gaga',    'ladygaga56@gmail.com',
 INSERT INTO usuario values (default, 'Miley', 	'Cyrus',    'mcyrus@gmail.com',      'mcyrus',  	'2875','1990-05-08',	34534555, 'mileyfotoPerfil.jpg', default, default);
 INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue@gmail.com',		 'ablue',       '4563','1988-05-05',	35674663, 'adeleFotoPerfil.jpg', default, default);
 
-INSERT INTO posteo values (default, 1 , 'posteoZendaya.jpg', 'Zendaya', default, default);
-INSERT INTO posteo values (default, 2 , 'posteo1Noah.jpg', 'Noah', default, default);
-INSERT INTO posteo values (default, 3 , 'ladygagaposteo1.jpg', 'LadyGaga', default, default);
-INSERT INTO posteo values (default, 4 , 'mileyposteo1.jpg', 'Miley', default, default);
-INSERT INTO posteo values (default, 5 , 'adeleposteo1.jpg', 'Adele', default, default);
-INSERT INTO posteo values (default, 1 , 'posteo2Zendaya.jpg', 'Zendaya', default, default);
-INSERT INTO posteo values (default, 2 , 'poseteNoah.jpg', 'Noah', default, default);
-INSERT INTO posteo values (default, 3 , 'ladygagaposteo2.jpg', 'LadyGaga', default, default);
-INSERT INTO posteo values (default, 4 , 'mileyposteo2.jpg', 'Miley', default, default);
-INSERT INTO posteo values (default, 5, 'adeleposteo2.jpg', 'Adele', default, default);
+INSERT INTO posteo values (default, 1 , '/images/users/posteoZendaya.jpg', 'Zendaya', default, default);
+INSERT INTO posteo values (default, 2 , '/images/users/posteo1Noah.jpg', 'Noah', default, default);
+INSERT INTO posteo values (default, 3 , '/images/users/ladygagaposteo1.jpg', 'LadyGaga', default, default);
+INSERT INTO posteo values (default, 4 , '/images/users/mileyposteo1.jpg', 'Miley', default, default);
+INSERT INTO posteo values (default, 5 , '/images/users/adeleposteo1.jpg', 'Adele', default, default);
+INSERT INTO posteo values (default, 1 , '/images/users/posteo2Zendaya.jpg', 'Zendaya', default, default);
+INSERT INTO posteo values (default, 2 , '/images/users/poseteNoah.jpg', 'Noah', default, default);
+INSERT INTO posteo values (default, 3 , '/images/users/ladygagaposteo2.jpg', 'LadyGaga', default, default);
+INSERT INTO posteo values (default, 4 , '/images/users/mileyposteo2.jpg', 'Miley', default, default);
+INSERT INTO posteo values (default, 5, '/images/users/adeleposteo2.jpg', 'Adele', default, default);
 
 
 INSERT INTO comentario values (default, 1, 9, 'Me gusta tu foto', default, default);
@@ -67,4 +67,3 @@ INSERT INTO comentario values (default, 5, 6, 'Me gusta tu foto', default, defau
 INSERT INTO comentario values (default, 3, 4, 'Me gusta tu foto', default, default);
 INSERT INTO comentario values (default, 1, 2, 'Me gusta tu foto', default, default);
 INSERT INTO comentario values (default, 4, 8, 'Me gusta tu foto', default, default);
-

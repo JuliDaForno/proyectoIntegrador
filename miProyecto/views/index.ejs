@@ -5,7 +5,7 @@
 
 
 <body>
-    <% if (locals.user != undefined) { %>
+    <% if (locals.nombre != undefined) { %>
         <%- include('./partials/headerLogueado') %>
     <% } else { %>
         <%- include('./partials/header') %>
@@ -13,7 +13,8 @@
 
     <main>
         <section class="center main-content">
-           
+            <%= console.log(locals) %> 
+            <% console.log(locals) %> 
         <% for( let i = 0; i <posteos.length; i++ ) { %>
            
             <article class="post">
@@ -37,7 +38,6 @@
                         <a href="/posts/detalle/<%=posteos[i].id %>">
                             <img src="/images/users/<%= posteos[i].image_name%>" alt="">
                         </a>
-                        <h4><%= posteos[i].pie_post%> </h4>
                     </div>
                     <ul class="post-reacciones">
                         <li>

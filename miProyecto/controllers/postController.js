@@ -39,35 +39,8 @@ const postController = {
                 res.redirect('/')
             })
             .catch(function (error) {
-                req.send(error);
+                console.log(error);
             })
-        /* let postAGuardar = req.body;
-         return res.redirect('/');*/
-
-        //empiezo a trabajar con agregarPost
-
-        /* let datosUsuario = req.body
-    
-            let errors = {}
-            console.log(datosUsuario);
-            if(req.body.imagen == ""){
-                errors.message = "debes subir una imagen"
-                res.locals.errors = errors
-                return res.render('index', {usuario_id: req.params.id})
-            }else if(req.body.post == ""){
-                errors.message = "el post esta vacio"
-                res.locals.errors = errors
-                return res.render('index', {usuario_id: req.params.id})
-            }
-            else{
-                let nuevosDatos = {
-                    image_name: req.file.filename,
-                    pie_post: req.body.post
-                }
-            if(req.file) req.body.image_name = (req.file.path).replace(`public`, ``) //lo que viene por la ruta que te lo meta adentro de public 
-            Posteo.create( nuevosDatos,{where: {id: req.params.id}})
-            .then((resultado) => {res.redirect("/")})
-            } */
     },
     update: (req, res) => {
         let id = req.params.id;

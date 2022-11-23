@@ -33,10 +33,15 @@ app.use(session({
 
 app.use(function(req,res,next){
   if(req.session.user != undefined){
-    res.locals.user = req.session.user;
-    res.locals = { idusuario: req.session.user.id
+    res.locals = { idusuario: req.session.user.id,
+      usuario: req.session.user.usuario, 
+      foto: req.session.user.foto,
+      nombre: req.session.user.nombre,
       
     }
+  }
+  else{
+    res.locals.user=null
   }
 
 

@@ -22,7 +22,7 @@ updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 CREATE TABLE posteo(
 id INT unsigned primary key auto_increment,
 id_usuarios INT UNSIGNED NOT NULL,
-image_name varchar (50) not null,
+image_name varchar (300) not null,
 pie_post varchar (50) not null,
 createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -41,17 +41,6 @@ updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 FOREIGN KEY (id_usuarios) REFERENCES usuario(id),
 FOREIGN KEY (id_posteos) REFERENCES posteo(id)
 );
-
-CREATE TABLE seguidores(
-id INT UNSIGNED NOT NULL primary key auto_increment,
-id_seguido INT UNSIGNED NOT NULL,
-id_seguidor INT UNSIGNED NOT NULL,
-createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-FOREIGN KEY (id_seguido) REFERENCES usuario(id),
-FOREIGN KEY (id_seguidor) REFERENCES usuario(id)
-);
-
 
 
 INSERT INTO usuario values (default, 'Zendaya', 'Coleman', 'zendayac75@gmail.com', 	'zendayac75', 	'1888','1998-08-02',	44232556, 'fotoPerfilZendaya.jpg', default, default);
@@ -79,6 +68,3 @@ INSERT INTO comentario values (default, 3, 4, 'Me gusta tu foto', default, defau
 INSERT INTO comentario values (default, 1, 2, 'Me gusta tu foto', default, default);
 INSERT INTO comentario values (default, 4, 8, 'Me gusta tu foto', default, default);
 
-INSERT INTO seguidores values (default, 1, 2, default, default);
-INSERT INTO seguidores values (default, 2, 1, default, default);
-INSERT INTO seguidores values (default, 1, 3, default, default);

@@ -13,19 +13,32 @@
 
     <main>
         <section class="center main-content">
+           
         <% for( let i = 0; i <posteos.length; i++ ) { %>
+           
             <article class="post">
-                 
+                
+                <% if (posteos[i].usuario.id == locals.idusuario) { %>
+                    <p class="">
+                        <a href="/posts/editar/<%=posteos[i].id %>">Editar producto</a>
+                    </p> 
+                    <p class="">
+                        <a href="/posts/delete/<%=posteos[i].id %>">Eliminar producto</a>
+                    </p> 
+                <% } %>
+
+                
                     <div class="info-usuario ">
-                        <img class="fotoPerfil" src="/images/<%=posteos[i].usuario.foto %>" alt="">
+                        <img class="fotoPerfil" src="/images/users/<%=posteos[i].usuario.foto %>" alt="">
                         <h4>
                             <a href="/users/perfil/<%=posteos[i].id_usuarios %>"><%=posteos[i].usuario.usuario %></a>
                         </h4>
                     </div>
                     <div class="post-body">
                         <a href="/posts/detalle/<%=posteos[i].id %>">
-                            <img src="/images/<%= posteos[i].image_name%>" alt="">
+                            <img src="/images/users/<%= posteos[i].image_name%>" alt="">
                         </a>
+                        <h4><%= posteos[i].pie_post%> </h4>
                     </div>
                     <ul class="post-reacciones">
                         <li>

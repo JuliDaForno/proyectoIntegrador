@@ -1,7 +1,7 @@
 create schema proyectoIntegrador;
 use proyectoIntegrador;
 
-/CREAR TABLAS DE LA APP/
+
 
 CREATE TABLE usuario(
 id INT unsigned primary key auto_increment,
@@ -52,13 +52,13 @@ FOREIGN KEY (id_seguido) REFERENCES usuario(id),
 FOREIGN KEY (id_seguidor) REFERENCES usuario(id)
 );
 
-/CREAR DATOS DE LA APP/
 
-INSERT INTO usuario values (default, 'Zendaya', 'Coleman','zendayac75@gmail.com', 	'zendayac75', 	'1888','1998-08-02',	44232556, 'fotoPerfilZendaya.jpg', default, default);
-INSERT INTO usuario values (default, 'Noah', 	'Schnapp', 	'nchnapp', 	'nschnapp@gmail.com',	'2514','1999-10-05',	35676553, 'posteo2Noah.jpeg', default, default);
-INSERT INTO usuario values (default, 'Lady', 	'Gaga', 	'ladygaga56', 'ladygaga56@gmail.com',	'25689','1988-06-07',	33367114, 'ladygagaFotoperfil.jpg', default, default);
-INSERT INTO usuario values (default, 'Miley', 	'Cyrus', 	'mcyrus', 	'mcyrus@gmail.com',	'2875','1990-05-08',	34534555, 'mileyfotoPerfil.jpg', default, default);
-INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue', 	'ablue@gmail.com',	'4563','1988-05-05',	35674663, 'adeleFotoPerfil.jpg', default, default);
+
+INSERT INTO usuario values (default, 'Zendaya', 'Coleman', 'zendayac75@gmail.com', 	'zendayac75', 	'1888','1998-08-02',	44232556, 'fotoPerfilZendaya.jpg', default, default);
+INSERT INTO usuario values (default, 'Noah', 	'Schnapp', 'nschnapp@gmail.com',	'nchnapp',   	'2514','1999-10-05',	35676553, 'posteo2Noah.jpeg', default, default);
+INSERT INTO usuario values (default, 'Lady', 	'Gaga',    'ladygaga56@gmail.com',	'ladygaga56',   '25689','1988-06-07',	33367114, 'ladygagaFotoperfil.jpg', default, default);
+INSERT INTO usuario values (default, 'Miley', 	'Cyrus',    'mcyrus@gmail.com',      'mcyrus',  	'2875','1990-05-08',	34534555, 'mileyfotoPerfil.jpg', default, default);
+INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue@gmail.com',		 'ablue',       '4563','1988-05-05',	35674663, 'adeleFotoPerfil.jpg', default, default);
 
 INSERT INTO posteo values (default, 1 , 'posteoZendaya.jpg', 'Zendaya', default, default);
 INSERT INTO posteo values (default, 2 , 'posteo1Noah.jpg', 'Noah', default, default);

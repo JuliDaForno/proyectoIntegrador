@@ -44,7 +44,6 @@ app.use(function(req,res,next){
     res.locals.user=null
   }
 
-
   return next();
 });
 

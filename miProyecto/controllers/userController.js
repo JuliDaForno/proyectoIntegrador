@@ -36,7 +36,6 @@ const userController = {
 
     //guardar el perfil
     store: (req,res)=>{
-console.log(req.body);
         let errors={};
        if(req.body.nombre== ""){ console.log('nombre');
             errors.message="El campo nombre esta vacío";
@@ -86,7 +85,6 @@ console.log(req.body);
         else{
             //pregunto si no existe
             let condicion = {where:[{email: req.body.email}]}
-            console.log(req.file);
             usuario.findOne(condicion)
             .then((result)=>{
                 
@@ -143,7 +141,6 @@ console.log(req.body);
       usuario.findOne(filtro)
         .then((result)=>{
             if(result != null){
-                console.log(result)
                 let passEncriptada = bcrypt.compareSync(info.password, result.contrasenia);
                 if(passEncriptada){
                     req.session.user = result.dataValues;

@@ -294,3 +294,26 @@ main {
     justify-content: space-between;
     width: 100%;
 }
+
+.foto-login{
+    width: 25%;
+    margin-left:10%;
+  }
+
+  .foto-lily img{
+    height: 50px;
+    padding: 10%;
+  
+  }
+
+  .form-login{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .formulario, .form-register{
+    width: 50%;
+    margin-left: 3%;
+    margin-right: 5%;
+  }

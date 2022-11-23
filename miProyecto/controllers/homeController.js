@@ -17,6 +17,7 @@ const homeController={
         posteo.findAll(relaciones)
         .then((result)=>{
             //res.send(result)
+            console.log(result);
             return res.render('index', {posteos: result})
             
         })

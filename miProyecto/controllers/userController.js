@@ -36,7 +36,7 @@ const userController = {
 
     //guardar el perfil
     store: (req,res)=>{
-
+console.log(req.body);
         let errors={};
        if(req.body.nombre== ""){ console.log('nombre');
             errors.message="El campo nombre esta vacío";
@@ -58,12 +58,12 @@ const userController = {
             res.locals.errors=errors;
             return res.render('registracion');
         }
-        else if (req.body.password==""){
+        else if (req.body.contrasenia==""){
             errors.message="El campo password esta vacío";
             res.locals.errors=errors;
             return res.render('registracion');
         }
-        else if (req.body.password.length <= 3){
+        else if (req.body.contrasenia.length <= 3){
             errors.message="El campo password debe ser de 3 o mas caracteres";
             res.locals.errors=errors;
             return res.render('registracion');
@@ -100,13 +100,13 @@ const userController = {
                     let usuarioAGuardar = req.body;
                     let user ={
                         nombre:usuarioAGuardar.nombre,
-                        apellido: usuarioAGuardar.apellido,
-                        usuario:usuarioAGuardar.usuario,
+                        apellido: null,
+                        usuario:usuarioAGuardar.nombre,
                         email: usuarioAGuardar.email,
-                        contrasenia: bcrypt.hashSync(usuarioAGuardar.password,10),
-                        foto: req.file.filename,
-                        fecha_nacimiento: usuarioAGuardar.fecha,
-                        numero_documento: usuarioAGuardar.dni
+                        contrasenia:bcrypt.hashSync(usuarioAGuardar.contrasenia,10),
+                        foto: `/image/users/${req.file.filename}`,
+                        fecha_nacimiento: usuarioAGuardar.fechaDeNacimiento,
+                        numero_documento: null
             
                     }
                     usuario.create(user)

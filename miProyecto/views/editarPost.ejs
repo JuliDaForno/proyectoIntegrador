@@ -14,14 +14,15 @@
     <main>
         <section class="center main-content">
         <h1>Editar Post</h1>
-        <form action="/users/login" method="post" encrtype="multipart/from-data">
+       
+        <form action="/posts/editar/<%= result.id %> " method="post" encrtype="multipart/from-data">
             <div>
                 <label for="imagen"> Imagen </label>
-                <input type="file" name="imagen"  placeholder="Editar posteo">
+                <input type="file" name="imagen" value="<%= result.image_name %> ">
             </div>
             <div>
                 <label for="post"> Texto</label>
-                <input type="text" name="post"  placeholder="Escribe un texto para el posteo">
+                <input type="text" name="post"  value="<%= result.pie_post %> ">
             </div>
             
             <button type="submit">Editar</button>

@@ -15,13 +15,12 @@
         <section class="center main-content">
         <h1>Editar Post</h1>
        
-        <h4> <%= result.id %></h4> 
         <form action="/posts/editar/<%= result.id %> " method="post" encrtype="multipart/from-data">
             <div>
                 <label for="imagen"> Imagen </label>
                 <input type="file" name="imagen" value="<%= result.image_name %> ">
             </div>
-            <div> 
+            <div>
                 <label for="post"> Texto</label>
                 <input type="text" name="post"  value="<%= result.pie_post %> ">
             </div>

@@ -59,20 +59,6 @@ module.exports = function (sequelize, dataTypes) {
             foreignKey : 'id_usuarios',
             timestamps: false,
         })
-        Usuario.belongsToMany(models.Usuario,{
-            as: 'mis_seguidores',
-            through: 'seguidores',
-            foreignKey: 'id_seguidor',
-            otherKey: 'id_seguido',
-
-        })
-        Usuario.belongsToMany(models.Usuario,{
-            as: 'seguidos',
-            through: 'seguidores',
-            foreignKey: 'id_seguido',
-            otherKey: 'id_seguidor',
-
-        })
 
     }
     return Usuario;

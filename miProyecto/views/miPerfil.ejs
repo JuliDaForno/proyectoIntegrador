@@ -4,12 +4,12 @@
     <%- include('./partials/head') %>
 
 <body>
-    
     <% if (locals.nombre != undefined) { %>
         <%- include('./partials/headerLogueado') %>
     <% } else { %>
         <%- include('./partials/header') %>
     <% } %>
+
 
     <main>
         <div class="user-detail container">
@@ -18,7 +18,7 @@
                 <div class="info-usuario">
 
                     <p><%= usuario.nombre %> </p> 
-                    <a class="follow" href="">seguir</a>
+                    <a class="follow" href="/users/editarPerfil/<%=locals.idusuario %>">Editar Perfil</a>
                     <ul class="meta">
                         <li> publicaciones: <%= usuario.posteo.length %> </li>
                         <li> seguidores: <%= usuario.mis_seguidores %></li>

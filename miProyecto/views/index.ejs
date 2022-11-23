@@ -12,9 +12,7 @@
     <% } %>
 
     <main>
-        <section class="center main-content">
-            <%= console.log(locals) %> 
-            <% console.log(locals) %> 
+        <section class="center main-content"> 
         <% for( let i = 0; i <posteos.length; i++ ) { %>
            
             <article class="post">
@@ -27,7 +25,6 @@
                         <a href="/posts/delete/<%=posteos[i].id %>">Eliminar producto</a>
                     </p> 
                 <% } %>
-
                 
                     <div class="info-usuario ">
                         <img class="fotoPerfil" src="<%=posteos[i].usuario.foto %>" alt="">
@@ -39,7 +36,6 @@
                         <a href="/posts/detalle/<%=posteos[i].id %>">
                             <img src="<%= posteos[i].image_name%>" alt="">
                         </a>
-                        <h4><%= posteos[i].pie_post%> </h4>
                     </div>
                     <ul class="post-reacciones">
                         <li>
@@ -59,7 +55,6 @@
                                     <span> <%= posteos[i].comentario[j].texto_comentario %> </span>
                                 </li>
                             <% } %>
-
                             <a href="/posts/detalle/<%= posteos[i].id %>">Ver más...</a>
                         </ul>
                     </div>

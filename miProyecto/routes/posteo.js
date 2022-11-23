@@ -6,7 +6,7 @@ let path = require('path');
 
 let storage = multer.diskStorage({
     destination: function( req, res, cb){
-        cb(null,  'public/images/posts')
+        cb(null,  'public/images/posteos')
     },
     filename: function(req, file, cb){
         cb(null, file.fieldname +  '-' + Date.now() + path.extname(file.originalname))
@@ -14,7 +14,6 @@ let storage = multer.diskStorage({
 })
 
 let upload = multer({storage: storage})
-
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

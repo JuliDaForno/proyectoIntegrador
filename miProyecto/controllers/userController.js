@@ -104,7 +104,7 @@ console.log(req.body);
                         usuario:usuarioAGuardar.nombre,
                         email: usuarioAGuardar.email,
                         contrasenia:bcrypt.hashSync(usuarioAGuardar.contrasenia,10),
-                        foto: `/image/users/${req.file.filename}`,
+                        foto: `/images/users/${req.file.filename}`,
                         fecha_nacimiento: usuarioAGuardar.fechaDeNacimiento,
                         numero_documento: null
             

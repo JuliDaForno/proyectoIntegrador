@@ -36,13 +36,9 @@ app.use(function(req,res,next){
     res.locals = { idusuario: req.session.user.id,
       usuario: req.session.user.usuario, 
       foto: req.session.user.foto,
+      nombre: req.session.user.nombre,
       
     }
-    res.locals = {nombre: req.session.user.nombre,
-      
-      
-   
-}
   }
   else{
     res.locals.user=null

@@ -5,6 +5,7 @@ const op = db.Sequelize.Op;
 
 const homeController={
     index: function (req,res) {
+        console.log(req.session.user);
         let relaciones = {
             include:[
                 {
@@ -17,7 +18,6 @@ const homeController={
         posteo.findAll(relaciones)
         .then((result)=>{
             //res.send(result)
-            console.log(result);
             return res.render('index', {posteos: result})
             
         })

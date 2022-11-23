@@ -39,7 +39,7 @@ const postController = {
                 res.redirect('/')
             })
             .catch(function (error) {
-                req.send(error);
+                console.log(error);
             })
         /* let postAGuardar = req.body;
          return res.redirect('/');*/

@@ -89,35 +89,26 @@ const userController = {
             let condicion = { where: [{ email: req.body.email }] }
             console.log(req.file);
             usuario.findOne(condicion)
-                .then((result) => {
-
-                    if (result != undefined) {
-                        errors.message = "El mail ya pertenece a un usuario existente";
-                        res.locals.errors = errors;
-                        return res.render('registracion');
-
-                    } else {
-
-                        let usuarioAGuardar = req.body;
-                        let user = {
-                            nombre: usuarioAGuardar.nombre,
-                            apellido: null,
-                            usuario: usuarioAGuardar.nombre,
-                            email: usuarioAGuardar.email,
-                            contrasenia: bcrypt.hashSync(usuarioAGuardar.contrasenia, 10),
-                            foto: `/image/users/${req.file.filename}`,
-                            fecha_nacimiento: usuarioAGuardar.fechaDeNacimiento,
-                            numero_documento: null
-
-                        }
-                        usuario.create(user)
-                            .then((result) => {
-                                return res.redirect('/users/login')
-
-                            })
-                            .catch((err) => {
-                                console.log(err)
-                            })
+            .then((result)=>{
+                
+                if(result!=undefined){
+                    errors.message="El mail ya pertenece a un usuario existente";
+                    res.locals.errors=errors;
+                    return res.render('registracion');
+  
+                }else{
+                    
+                    let usuarioAGuardar = req.body;
+                    let user ={
+                        nombre:usuarioAGuardar.nombre,
+                        apellido: null,
+                        usuario:usuarioAGuardar.nombre,
+                        email: usuarioAGuardar.email,
+                        contrasenia:bcrypt.hashSync(usuarioAGuardar.contrasenia,10),
+                        foto: `/image/users/${req.file.filename}`,
+                        fecha_nacimiento: usuarioAGuardar.fechaDeNacimiento,
+                        numero_documento: null
+            
                     }
 
                 })

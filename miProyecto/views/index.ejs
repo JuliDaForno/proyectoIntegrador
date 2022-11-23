@@ -27,14 +27,14 @@
                 <% } %>
                 
                     <div class="info-usuario ">
-                        <img class="fotoPerfil" src="/images/users/<%=posteos[i].usuario.foto %>" alt="">
+                        <img class="fotoPerfil" src="<%=posteos[i].usuario.foto %>" alt="">
                         <h4>
                             <a href="/users/perfil/<%=posteos[i].id_usuarios %>"><%=posteos[i].usuario.usuario %></a>
                         </h4>
                     </div>
                     <div class="post-body">
                         <a href="/posts/detalle/<%=posteos[i].id %>">
-                            <img src="/images/users/<%= posteos[i].image_name%>" alt="">
+                            <img src="<%= posteos[i].image_name%>" alt="">
                         </a>
                     </div>
                     <ul class="post-reacciones">

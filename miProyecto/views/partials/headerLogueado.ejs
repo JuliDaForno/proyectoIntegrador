@@ -3,10 +3,9 @@
         <div class="navbar-left">
             <h2 class="logo"><a href="/">Celebrity-Finder</a></h2>
         </div>
-  <a class="navbar-brand" href="#">Bienvenido, <%= locals.user.usuario  %> </a>
- 
-  <a href="/users/miPerfil/<%= locals.user.id  %>">
-    <img src="<%=locals.user.foto %>" alt="<%= locals.user.nombre %> " style="width:50px">
+  <a class="navbar-brand" href="#">Bienvenido, <%= locals.usuario  %> </a>
+  <a href="/users/miPerfil/<%= locals.idusuario  %>">
+    <img src="<%=locals.foto %>" alt="<%= locals.nombre %> " style="width:50px">
   </a>
 
 <div class="navbar-center">
@@ -20,7 +19,7 @@
   <ul class="menu">
       <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
       <li><a href="/posts/agregar"><i class="fa-regular fa-square-plus"></i></a></li>
-      <li><a href="/users/miPerfil/<%= locals.user.id %> "><i class="fa-regular fa-user"></i></a></li>
+      <li><a href="/users/miPerfil/<%= locals.idusuario %> "><i class="fa-regular fa-user"></i></a></li>
       <li><a href="/users/logout" ><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
   </ul>
 </div>

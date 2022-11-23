@@ -39,7 +39,7 @@ const postController = {
                 res.redirect('/')
             })
             .catch(function (error) {
-                req.send(error);
+                console.log(error);
             })
     },
     update: (req, res) => {

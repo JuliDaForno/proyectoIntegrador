@@ -22,7 +22,7 @@ updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 CREATE TABLE posteo(
 id INT unsigned primary key auto_increment,
 id_usuarios INT UNSIGNED NOT NULL,
-image_name varchar (50) not null,
+image_name varchar (300) not null,
 pie_post varchar (50) not null,
 createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

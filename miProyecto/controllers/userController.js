@@ -252,7 +252,7 @@ const userController = {
                 numero_documento: req.body.dni,
                 usuario: req.body.username,
                 fecha_nacimiento: req.body.fecha,
-                foto: req.file.filename
+                foto: `/images/users/${req.file.filename}`
             }
             usuario.update( nuevosDatos,{where: {id: req.params.id}})
             .then((resultado) => {res.redirect(`/users/perfil/${req.params.id}`)})

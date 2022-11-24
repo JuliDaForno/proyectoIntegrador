@@ -51,7 +51,6 @@ const homeController={
                 res.locals.errorBuscador = 'No hay resultados para tu busqueda'
                 res.render('resultadoBusqueda')
             }else{
-                console.log(postsBuscados[1].dataValues)
                 res.render('resultadoBusqueda', {posts: postsBuscados})
             }
         })

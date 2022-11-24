@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include('./partials/head') %> 
 
-    <% if (locals.user != undefined) { %>
+    <% if (locals.nombre != undefined) { %>
         <%- include('./partials/headerLogueado') %>
     <% } else { %>
         <%- include('./partials/header') %>
@@ -31,7 +31,7 @@
                     <% for( let i = 0; i < usuario.posteo.length; i++ ) { %>
                     <article class="post">
                         <a href="/posts/detalle/<%=usuario.posteo[i].id %> ">
-                            <img src="/images/posteos<%=usuario.posteo[i].image_name%>" alt="">
+                            <img src="<%=usuario.posteo[i].image_name%>" alt="">
                         </a>
                     </article>
                     <% } %>         

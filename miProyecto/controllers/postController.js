@@ -30,9 +30,10 @@ const postController = {
         req.body.id_usuarios = req.session.user.id
 
         if (req.file) req.body.image_name = (req.file.path).replace('public', '');
+        console.log(req.file.filename);
         db.Posteo.create({
             id_usuarios: req.session.user.id,
-            image_name:req.body.image_name,
+            image_name: `/images/posteos/${req.file.filename}`,
             pie_post: req.body.post
         })
             .then(function () {
@@ -66,7 +67,7 @@ const postController = {
         if (req.file) req.body.image_name = (req.file.path).replace('public', '');
         db.Posteo.update({
             id_usuarios: req.session.user.id,
-            image_name: req.body.imagen,
+            image_name:  `/images/posteos/${req.file.filename}`,
             pie_post: req.body.post} ,
             {where: { id: primaryKey}}
         )

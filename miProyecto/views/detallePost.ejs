@@ -24,10 +24,19 @@
             <section class="right">
                 <h4>Comentarios</h4>
                 <section class="comments">
-                    <form action="/posts/addComment" method="post" class="comment-form">
-                        <input type="text" class="input"name="comentario" placeholder="Agregar comentario">
-                        <button type="submit">Comentar</button>
-                    </form>
+                    <% if (locals.nombre != undefined) { %>
+                        <form action="/posts/addComment" method="post" class="comment-form">
+                            <input type="text" class="input"name="comentario" placeholder="Agregar comentario">
+                            <button type="submit">Comentar</button>
+                        </form>
+                    <% } else{%>
+                        <form action="/users/login" method="get" class="comment-form">
+        
+                            <button type="submit">Logueate para comentar</button>
+                        </form>
+                <%  }%> 
+
+            
                     <div>
                         
                         <% for( let i = 0; i < posteo.comentario.length; i++ ) { %>

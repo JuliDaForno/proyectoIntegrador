@@ -6,18 +6,15 @@ const op = db.Sequelize.Op;
 const homeController={
     index: function (req,res) {
         console.log(req.session.user);
-        let relaciones = {
-            include:[
-                {
-                all:true,
-                nested:true,
-            }
-            ]
-
-        };
-        posteo.findAll(relaciones)
+      
+        posteo.findAll({include:[
+            {
+            all:true,
+            nested:true,
+        }
+        ], order:[['createdAt','DESC']]})
         .then((result)=>{
-            //res.send(result)
+          //  res.send(result)
             return res.render('index', {posteos: result})
             
         })

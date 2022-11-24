@@ -18,13 +18,8 @@
                 <div class="info-usuario">
 
                     <p><%= usuario.nombre %> </p> 
-<<<<<<< HEAD
                     <a class="follow" href="">seguir</a>
                     <ul class="meta">
-=======
-                    <a class="follow" href="/users/editarPerfil/<%= locals.idusuario %>">Editar perfil</a>
-                    <ul class="meta"> 
->>>>>>> 68f6e7ce8985b6c2b7394a7538fdd28c6381c835
                         <li> publicaciones: <%= usuario.posteo.length %> </li>
                         <li> seguidores: <%= usuario.mis_seguidores %></li>
                         <li> seguidos: <%= usuario.seguidos %></li>
@@ -35,11 +30,7 @@
                     <% for( let i = 0; i < usuario.posteo.length; i++ ) { %>
                     <article class="post">
                         <a href="/posts/detalle/<%=usuario.posteo[i].id %> ">
-<<<<<<< HEAD
                             <img src="/images/posteos/<%=usuario.posteo[i].image_name%>" alt="">
-=======
-                            <img src="<%=usuario.posteo[i].image_name%>" alt="">
->>>>>>> 68f6e7ce8985b6c2b7394a7538fdd28c6381c835
                         </a>
                     </article>
                     <% } %>         

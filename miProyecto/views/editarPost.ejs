@@ -15,7 +15,7 @@
         <section class="center main-content">
         <h1>Editar Post</h1>
        
-        <form action="/posts/editar/<%= result.id %> " method="post" encrtype="multipart/from-data">
+        <form action="/posts/editar/<%= result.id %> " method="post" enctype="multipart/form-data">
             <div>
                 <label for="imagen"> Imagen </label>
                 <input type="file" name="imagen" value="<%= result.image_name %> ">

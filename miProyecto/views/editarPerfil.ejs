@@ -12,8 +12,10 @@
 
     <main>
         <section class="center main-content" class="form-login">
-            
+         
+    //   configurar el formulario para subir archivos    
         <h1>Editar perfil</h1>
+       
         <form action="/users/update/<%= usuario_id %>"  method="post" enctype="multipart/form-data">
             <% if (locals.errors) { %>
                 <p class="error"  style="color:red"><%= locals.errors.message %> </p>

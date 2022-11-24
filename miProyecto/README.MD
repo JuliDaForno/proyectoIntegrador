@@ -1,14 +1,12 @@
 PROYECTO INTEGRADOR
 
-Funcionalidades electivas: 🚀
 
+Funcionalidades electivas: 🚀
 
 
 Imagen de Perfil 📋
 Buscador de posteos mejorado 📋
 Editar datos del usuario 📋
-
-
 
 
 

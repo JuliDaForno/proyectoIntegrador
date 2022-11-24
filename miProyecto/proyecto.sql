@@ -51,9 +51,9 @@ INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue@gmail.com',		 'ab
 
 INSERT INTO posteo values (default, 1 , '/images/users/posteoZendaya.jpg', 'Zendaya', default, default);
 INSERT INTO posteo values (default, 2 , '/images/users/posteo1Noah.jpg', 'Noah', default, default);
-INSERT INTO posteo values (default, 3 , '/images/users/ladygagaposteo1.jpg', 'LadyGaga', default, default);
+INSERT INTO posteo values (default, 3 , '/images/users/ladygagaposteo1.jpeg', 'LadyGaga', default, default);
 INSERT INTO posteo values (default, 4 , '/images/users/mileyposteo1.jpg', 'Miley', default, default);
-INSERT INTO posteo values (default, 5 , '/images/users/adeleposteo1jpg', 'Adele', default, default);
+INSERT INTO posteo values (default, 5 , '/images/users/adeleposteo1.jpg', 'Adele', default, default);
 INSERT INTO posteo values (default, 1 , '/images/users/posteo2Zendaya.jpg', 'Zendaya', default, default);
 INSERT INTO posteo values (default, 2 , '/images/users/poseteNoah.jpg', 'Noah', default, default);
 INSERT INTO posteo values (default, 3 , '/images/users/ladygagaposteo2.jpg', 'LadyGaga', default, default);

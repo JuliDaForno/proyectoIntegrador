@@ -294,6 +294,7 @@ main {
 .profile {
   border-radius: 90%;
   border: 2px solid chocolate;
+  width: 120px
 }
 
 .user-detail .meta {

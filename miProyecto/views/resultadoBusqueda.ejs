@@ -23,7 +23,7 @@
                     <% for(let i= 0; i < posts.length; i++){ %>
                         <div class="post-body">
                         <a href="/posts/detalle/<%=posts[i].dataValues.id %>">
-                            <img src="/images/<%= posts[i].dataValues.image_name%>" alt="">
+                            <img src="<%= posts[i].dataValues.image_name%>" alt="">
                         </a>
                     </div>
                     <ul class="post-reacciones">

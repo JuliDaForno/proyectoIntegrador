@@ -40,9 +40,6 @@ app.use(function(req,res,next){
       
     }
    }
-  // else{
-  //   res.locals.user=null
-  // }
 
   return next();
 });

@@ -15,7 +15,7 @@ numero_documento INT UNSIGNED,
 foto varchar (100) not null,
 createdAT TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
- 
+
 );
 
 
@@ -53,7 +53,7 @@ INSERT INTO posteo values (default, 1 , '/images/users/posteoZendaya.jpg', 'Zend
 INSERT INTO posteo values (default, 2 , '/images/users/posteo1Noah.jpg', 'Noah', default, default);
 INSERT INTO posteo values (default, 3 , '/images/users/ladygagaposteo1.jpg', 'LadyGaga', default, default);
 INSERT INTO posteo values (default, 4 , '/images/users/mileyposteo1.jpg', 'Miley', default, default);
-INSERT INTO posteo values (default, 5 , '/images/users/adeleposteo1.jpg', 'Adele', default, default);
+INSERT INTO posteo values (default, 5 , '/images/users/adeleposteo1jpg', 'Adele', default, default);
 INSERT INTO posteo values (default, 1 , '/images/users/posteo2Zendaya.jpg', 'Zendaya', default, default);
 INSERT INTO posteo values (default, 2 , '/images/users/poseteNoah.jpg', 'Noah', default, default);
 INSERT INTO posteo values (default, 3 , '/images/users/ladygagaposteo2.jpg', 'LadyGaga', default, default);
@@ -67,3 +67,4 @@ INSERT INTO comentario values (default, 5, 6, 'Me gusta tu foto', default, defau
 INSERT INTO comentario values (default, 3, 4, 'Me gusta tu foto', default, default);
 INSERT INTO comentario values (default, 1, 2, 'Me gusta tu foto', default, default);
 INSERT INTO comentario values (default, 4, 8, 'Me gusta tu foto', default, default);
+

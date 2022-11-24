@@ -12,7 +12,9 @@
     <% } %>
 
     <main>
-        <section class="center main-content"> 
+        <section class="center main-content">
+            <%= console.log(locals) %> 
+            <% console.log(locals) %> 
         <% for( let i = 0; i <posteos.length; i++ ) { %>
            
             <article class="post">
@@ -36,6 +38,7 @@
                         <a href="/posts/detalle/<%=posteos[i].id %>">
                             <img src="<%=posteos[i].image_name%>" alt="">
                         </a>
+                        <h4><%= posteos[i].pie_post%> </h4>
                     </div>
                     <ul class="post-reacciones">
                         <li>

@@ -1,6 +1,10 @@
+//Paso 1: exportar
 module.exports = function (sequelize, dataTypes) {
+
+    //Paso 2: crear variables dentro de la función
     let alias = 'Usuario';
 
+    //Paso 3: Crear una variable con la estructura de la tabla
     let cols = {
         id: {
             autoIncrement: true,
@@ -29,7 +33,7 @@ module.exports = function (sequelize, dataTypes) {
         numero_documento: {
             type: dataTypes.INTEGER
         },
-        foto:{
+        foto: {
             type: dataTypes.STRING
         },
         createdAT: {
@@ -42,25 +46,30 @@ module.exports = function (sequelize, dataTypes) {
         }
     }
 
+    //Paso 4: crear un objeto literal con la configuración de la tabla
     let config = {
         tableName: "usuario",
         timestamps: false,
         underscored: false,
     }
 
+    //Paso 5: Crear el método definido con los tres parámetros.
     let Usuario = sequelize.define(alias, cols, config);
-    Usuario.associate = function(models) {
-       Usuario.hasMany(models.Posteo, {
-            as : 'posteo',
-            foreignKey : 'id_usuarios',
+    Usuario.associate = function (models) {
+        Usuario.hasMany(models.Posteo, {
+            as: 'posteo',
+            foreignKey: 'id_usuarios',
         })
         Usuario.hasMany(models.Comentario, {
-            as : 'comentario',
-            foreignKey : 'id_usuarios',
+            as: 'comentario',
+            foreignKey: 'id_usuarios',
             timestamps: false,
         })
+        
 
     }
+
+    //Paso 6: Retornar el valor del modelo
     return Usuario;
 
 }

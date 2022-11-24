@@ -1,5 +1,5 @@
 const db = require('../database/models');
-const usuario = db.Usuario //alias de models
+const usuario = db.Usuario
 const op = db.Sequelize.Op;
 const bcrypt=require('bcryptjs')
 
@@ -98,13 +98,13 @@ const userController = {
                     let usuarioAGuardar = req.body;
                     let user ={
                         nombre:usuarioAGuardar.nombre,
-                        apellido: null,
-                        usuario:usuarioAGuardar.nombre,
+                        apellido:usuarioAGuardar.apellido,
+                        usuario:usuarioAGuardar.usuario,
                         email: usuarioAGuardar.email,
                         contrasenia:bcrypt.hashSync(usuarioAGuardar.contrasenia,10),
                         foto: `/images/users/${req.file.filename}`,
                         fecha_nacimiento: usuarioAGuardar.fechaDeNacimiento,
-                        numero_documento: null
+                        numero_documento: usuarioAGuardar.dni
             
                     }
                     usuario.create(user)

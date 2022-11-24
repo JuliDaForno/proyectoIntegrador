@@ -4,12 +4,11 @@
 <%- include('./partials/head') %>
 
     <body>
-        <% if (locals.nombre != undefined) { %>
+        <% if (locals.user !=undefined) { %>
             <%- include('./partials/headerLogueado') %>
-        <% } else { %>
-            <%- include('./partials/header') %>
-        <% } %>
-    
+                <% } else { %>
+                    <%- include('./partials/header') %>
+                        <% } %>
 
  
                             <main>
@@ -31,14 +30,29 @@
 
                                                     </div>
                                                     <div class="form-group">
+                                                        <label class="form-texto-arriba">Nombre</label>
+                                                        <input type="text" class="form-control" id=""
+                                                            name="nombre" placeholder="Coloca tu apellido">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form-texto-arriba">Apellido</label>
+                                                        <input type="text" class="form-control" id=""
+                                                            name="apellido" placeholder="Coloca tu apellido">
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label class="form-texto-arriba">Nombre de Usuario</label>
                                                         <input type="text" class="form-control" id="nombre"
-                                                            name="nombre" placeholder="Creá tu nombre de usuario">
+                                                            name="usuario" placeholder="Creá tu nombre de usuario">
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="form-texto-arriba">Contraseña</label>
                                                         <input type="password" class="form-control" id="contrasenia"
-                                                            name="contrasenia" placeholder="***">
+                                                            name="contrasenia" placeholder="*****">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form-texto-arriba">Número de documento</label>
+                                                        <input type="text" class="form-control" id=""
+                                                            name="dni" placeholder="Coloca tu DNI">
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="form-texto-arriba">Fecha de nacimiento</label>

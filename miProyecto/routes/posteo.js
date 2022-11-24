@@ -9,7 +9,7 @@ let storage = multer.diskStorage({
         cb(null,  'public/images/posteos')
     },
     filename: function(req, file, cb){
-        cb(null, file.fieldname +  '-' + Date.now() + path.extname(file.originalname))
+        cb(null, (path.join(__dirname,file.fieldname +  '-' + Date.now() + path.extname(file.originalname))))
     }
 })
 
@@ -26,7 +26,7 @@ router.post('/agregar', upload.single('imagen'),  postController.store);
 router.get('/detalle/:id', postController.detallePosteo);
 router.get('/search', postController.showOne);
 
-
+//router.post('/editar/:id', postController.editarPost);
 router.get('/editar/:id', postController.update);
 
 router.post('/editar/:id', upload.single('imagen'), postController.editarPost);

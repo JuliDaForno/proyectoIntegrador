@@ -39,10 +39,10 @@ app.use(function(req,res,next){
       nombre: req.session.user.nombre,
       
     }
-  }
-  else{
-    res.locals.user=null
-  }
+   }
+  // else{
+  //   res.locals.user=null
+  // }
 
   return next();
 });

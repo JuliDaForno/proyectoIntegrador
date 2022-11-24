@@ -43,11 +43,11 @@ FOREIGN KEY (id_posteos) REFERENCES posteo(id)
 );
 
 
-INSERT INTO usuario values (default, 'Zendaya', 'Coleman', 'zendayac75@gmail.com', 	'zendayac75', 	'1888','1998-08-02',	44232556, 'fotoPerfilZendaya.jpg', default, default);
-INSERT INTO usuario values (default, 'Noah', 	'Schnapp', 'nschnapp@gmail.com',	'nchnapp',   	'2514','1999-10-05',	35676553, 'posteo2Noah.jpeg', default, default);
-INSERT INTO usuario values (default, 'Lady', 	'Gaga',    'ladygaga56@gmail.com',	'ladygaga56',   '25689','1988-06-07',	33367114, 'ladygagaFotoperfil.jpg', default, default);
-INSERT INTO usuario values (default, 'Miley', 	'Cyrus',    'mcyrus@gmail.com',      'mcyrus',  	'2875','1990-05-08',	34534555, 'mileyfotoPerfil.jpg', default, default);
-INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue@gmail.com',		 'ablue',       '4563','1988-05-05',	35674663, 'adeleFotoPerfil.jpg', default, default);
+INSERT INTO usuario values (default, 'Zendaya', 'Coleman', 'zendayac75@gmail.com', 	'zendayac75', 	'1888','1998-08-02',	44232556, '/images/users/fotoPerfilZendaya.jpg', default, default);
+INSERT INTO usuario values (default, 'Noah', 	'Schnapp', 'nschnapp@gmail.com',	'nchnapp',   	'2514','1999-10-05',	35676553, '/images/users/posteo2Noah.jpeg', default, default);
+INSERT INTO usuario values (default, 'Lady', 	'Gaga',    'ladygaga56@gmail.com',	'ladygaga56',   '25689','1988-06-07',	33367114, '/images/users/ladygagaFotoperfil.jpg', default, default);
+INSERT INTO usuario values (default, 'Miley', 	'Cyrus',    'mcyrus@gmail.com',      'mcyrus',  	'2875','1990-05-08',	34534555, '/images/users/mileyfotoPerfil.jpg', default, default);
+INSERT INTO usuario values (default, 'Adele', 	'Blue', 	'ablue@gmail.com',		 'ablue',       '4563','1988-05-05',	35674663, '/images/users/adeleFotoPerfil.jpg', default, default);
 
 INSERT INTO posteo values (default, 1 , '/images/users/posteoZendaya.jpg', 'Zendaya', default, default);
 INSERT INTO posteo values (default, 2 , '/images/users/posteo1Noah.jpg', 'Noah', default, default);

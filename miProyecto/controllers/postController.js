@@ -32,7 +32,7 @@ const postController = {
         if (req.file) req.body.image_name = (req.file.path).replace('public', '');
         db.Posteo.create({
             id_usuarios: req.session.user.id,
-            image_name: req.body.image_name,
+            image_name:req.body.image_name,
             pie_post: req.body.post
         })
             .then(function () {

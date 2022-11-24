@@ -253,7 +253,7 @@ const userController = {
                 foto: `/images/users/${req.file.filename}`
             }
             usuario.update( nuevosDatos,{where: {id: req.params.id}})
-            .then((resultado) => {res.redirect(`/users/miPerfil/${req.params.id}`)})
+            .then((resultado) => {res.redirect(`/users/MiPerfil/${req.params.id}`)})
         }
 
     }
